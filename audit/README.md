@@ -1,30 +1,42 @@
-# Stage 1: LLM Audit Screen (Original)
+# Stage 1 — LLM Audit + Binary Prediction
 
-This directory contains the **original Elixir source** used to run the GPT-5.4-mini screen over the 209 SciFact dev pairs. The screen's output is cached in [`../results/stage1_llm_screen/`](../results/stage1_llm_screen/) so downstream analysis does not require re-running this code.
+Two scripts that produce the inputs to Stages 2 and 3. Both are zero-shot, run against the OpenAI Responses API with structured JSON output, and write to [`../results/stage1_llm_screen/`](../results/stage1_llm_screen/) by default.
 
-## What's here
-
-```
-elixir/
-├── scifact_loader.ex   Joins claims_dev.jsonl with corpus.jsonl into (claim, doc) pairs
-├── scifact_auditor.ex  Sends each pair to GPT-5.4-mini with the audit prompt + JSON schema
-└── scifact_pilot.ex    Runs binary zero-shot prediction (used for the original F1 numbers)
+```bash
+pip install -r ../revision/requirements.txt
+export OPENAI_API_KEY=sk-...
 ```
 
-The audit prompt and structured JSON schema (AGREE / DISAGREE / DEBATABLE assessment, reasoning, error type, suggested label) live inside `scifact_auditor.ex` (`@audit_prompt`, `@audit_schema`).
+## screen.py — the audit screen
 
-## Why this is reference-only
+Sends each of the 209 dev (claim, evidence-doc) pairs to GPT-5.4-mini with the audit prompt and a structured JSON schema (`gold_assessment`: agree/disagree/debatable, plus reasoning, error type, suggested label). The output is the input to Stage 2 (manual review).
 
-These files were originally part of an Elixir umbrella project (`colonyOS`) that wired them up to a `ClaimVerifier` GenServer, a configured OpenAI-compatible LLM client, and a results-saving pipeline. They are included here for transparency about the exact prompt and schema we used, not as a runnable artifact.
+```bash
+python3 screen.py                  # full run (~$0.11)
+python3 screen.py --limit 2        # smoke test (~$0.001)
+python3 screen.py --out custom.json
+```
 
-If you want to re-run the screen from scratch, you have three options:
+Cached reference output: [`../results/stage1_llm_screen/scifact_audit_gpt-5.4-mini_n209_2026-04-02T14-33-55.931576Z.json`](../results/stage1_llm_screen/) — this is the screen the paper's downstream stages were derived from. Re-running will produce a fresh JSON with new timestamps; results should be qualitatively similar but bit-exact match is not guaranteed (the OpenAI API is non-deterministic even at temperature 0.3).
 
-1. **Use the cached output.** `results/stage1_llm_screen/scifact_audit_gpt-5.4-mini_n209_*.json` contains every per-pair verdict, reasoning string, and suggested label. This is what we recommend for any reproduction work, since it bit-exactly reproduces the input to Stages 2 and 3.
+## predict_binary.py — zero-shot SUPPORT/CONTRADICT classifier
 
-2. **Port the prompt to your own client.** The audit prompt and JSON schema in `scifact_auditor.ex` are short and self-contained; rewriting them as a 100-line Python script against the OpenAI Responses API takes about an hour. Use temperature 0.3 and the structured-output mode.
+Reproduces the per-model F1 numbers reported in the paper. Pair the predictions with original or corrected gold labels (from [`../corrections/`](../corrections/)) to compute the F1 deltas.
 
-3. **Stand up the original Elixir pipeline.** Drop these files into a Mix project, install `req` and `jason` and the OpenAI client, supply an `OPENAI_API_KEY`, and call `SrBench.ScifactAuditor.audit_all/1`. You will need to also provide the `SrBench.ScifactLoader` config (it caches the SciFact tarball under `priv/scifact_dataset/`).
+```bash
+python3 predict_binary.py --model gpt-5.4-mini   # paper reports 84.9 -> 88.7
+python3 predict_binary.py --model gpt-5.4-nano   # paper reports 79.5 -> 81.2
+python3 predict_binary.py --model gpt-5.4-mini --limit 2  # smoke test
+```
 
-## Cost
+Cached reference outputs:
+- [`../results/stage1_llm_screen/scifact_single_gpt-5.4-mini_n209_*.json`](../results/stage1_llm_screen/)
+- [`../results/stage1_llm_screen/scifact_single_gpt-5.4-nano_n209_*.json`](../results/stage1_llm_screen/)
 
-The original screen cost **$0.11** in OpenAI API fees (approximately 440K input tokens at March 2026 GPT-5.4-mini pricing; cached-input rates applied to repeated system-prompt content).
+## Notes
+
+- Both scripts use the OpenAI Responses API (`client.responses.create`) with `text.format = {type: "json_schema", strict: true}` for deterministic parsing.
+- `screen.py` uses temperature 0.3, max 600 output tokens, concurrency 15, matching the audit run that produced the paper's 209-pair screen.
+- `predict_binary.py` uses temperature 0.0, max 256 output tokens, concurrency 30.
+- Costs at March 2026 pricing: ~$0.11 (mini screen), ~$0.05 (mini binary), ~$0.02 (nano binary). Re-running all three is well under $0.25 total.
+- `_loader.py` is a small shared utility that joins `data/scifact/claims_dev.jsonl` with `corpus.jsonl` into the 209 audit pairs. It is imported by both scripts and by `revision/run_haiku_experiments.py`.

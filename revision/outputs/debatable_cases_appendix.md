@@ -4,10 +4,10 @@
 
 This file enumerates the 10 SciFact dev claims flagged by the LLM auditor and judged "debatable but defensible" at first-pass manual review. Source files:
 
-- `apps/sr_bench/priv/scifact_results/scifact_false_alarms_25_review.csv` (5 cases)
-- `apps/sr_bench/priv/scifact_results/scifact_false_alarms_remaining_24_review.csv` (5 cases)
+- `results/stage2_manual_review/scifact_false_alarms_25_review.csv` (5 cases)
+- `results/stage2_manual_review/scifact_false_alarms_remaining_24_review.csv` (5 cases)
 
-A row qualifies if `my_verdict == "DEBATABLE"`. Of the 10 cases, **2 (claim 847 and claim 1274) were subsequently upgraded to confirmed errors** in `apps/sr_bench/paper/corrections/dev_corrections.json` (both reclassified to NEI). The remaining 8 stay as defensible-but-borderline. The "Final status" column records the upgrade where it occurred.
+A row qualifies if `my_verdict == "DEBATABLE"`. Of the 10 cases, **2 (claim 847 and claim 1274) were subsequently upgraded to confirmed errors** in `corrections/dev_corrections.json` (both reclassified to NEI). The remaining 8 stay as defensible-but-borderline. The "Final status" column records the upgrade where it occurred.
 
 Original gold-label distribution among the 10: 7 SUPPORT, 3 CONTRADICT (claims 57, 847, 1041).
 Among the 8 final debatables: 6 SUPPORT, 2 CONTRADICT (claims 57, 1041).

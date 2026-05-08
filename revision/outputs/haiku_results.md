@@ -66,6 +66,6 @@ one that has memorized SciFact's gold labels.
 
 ## Files
 
-- Experiment 1 raw output: `apps/sr_bench/priv/scifact_results/revision/haiku_f1_n209_dev.json`
-- Experiment 2 raw output: `apps/sr_bench/priv/scifact_results/revision/contamination_probe_haiku.json`
-- Reproduction script: `apps/sr_bench/paper/revision/run_haiku_experiments.py`
+- Experiment 1 raw output: `results/stage3_revision/haiku_f1_n209_dev.json`
+- Experiment 2 raw output: `results/stage3_revision/contamination_probe_haiku.json`
+- Reproduction script: `revision/run_haiku_experiments.py`

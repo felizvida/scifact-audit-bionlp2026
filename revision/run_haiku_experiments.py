@@ -50,7 +50,7 @@ OUTPUT_PRICE_PER_TOKEN = 5.0 / 1_000_000
 
 
 # ---------------------------------------------------------------------------
-# Data loading: replicate Elixir join logic (one (claim, doc) pair per evidence doc)
+# Data loading: join evidence-doc pairs (one (claim, doc) per evidence doc)
 # ---------------------------------------------------------------------------
 def load_corpus() -> dict:
     corpus = {}

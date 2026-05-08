@@ -2,7 +2,7 @@
 
 All numbers below are computed by `stats_compute.py` (run from this directory) using `scipy.stats.binomtest` (v1.17.1) for both p-values and Clopper–Pearson exact CIs.
 
-The 9/11 SUPPORT count is verified directly from `apps/sr_bench/paper/corrections/dev_corrections.json`: among the 11 claim-level corrections (excluding the per-document outcome mismatch on claim 597), 9 had `original_label == "SUPPORT"` and 2 had `original_label == "CONTRADICT"` (claims 879 and 847).
+The 9/11 SUPPORT count is verified directly from `corrections/dev_corrections.json`: among the 11 claim-level corrections (excluding the per-document outcome mismatch on claim 597), 9 had `original_label == "SUPPORT"` and 2 had `original_label == "CONTRADICT"` (claims 879 and 847).
 
 ---
 

@@ -1,19 +1,19 @@
 #!/usr/bin/env python3
-"""Build the three BioNLP 2026 revision annotation packets.
+"""Build the BioNLP 2026 annotation packets (deterministic, seed=42).
 
 Inputs:
-  - apps/sr_bench/priv/scifact_dataset/claims_dev.jsonl
-  - apps/sr_bench/priv/scifact_dataset/corpus.jsonl
-  - apps/sr_bench/priv/scifact_results/scifact_audit_gpt-5.4-mini_n209_*.json
-  - apps/sr_bench/paper/corrections/dev_corrections.json
+  - data/scifact/claims_dev.jsonl
+  - data/scifact/corpus.jsonl
+  - results/stage1_llm_screen/scifact_audit_gpt-5.4-mini_n209_*.json
+  - corrections/dev_corrections.json
 
-Outputs (in this directory):
+Outputs (written to annotator_packets/):
   - blind_annotator_packet_dev.csv         (Packet 1, 209 rows, blind)
   - blind_annotator_packet_dev_unblinding_key.csv  (Packet 1 key)
   - llm_rejected_random_sample_30.csv      (Packet 2, 30 rows, not blind)
 
 Run:
-  python3 build_packets.py
+  python3 revision/build_packets.py
 """
 
 from __future__ import annotations
@@ -51,7 +51,7 @@ def load_json(path: Path) -> dict:
 
 
 def build_pairs(claims: list[dict], corpus_by_id: dict[int, dict]) -> list[dict]:
-    """Replicate the join in scifact_loader.ex.
+    """Join claims with corpus into one (claim, doc) pair per gold evidence doc.
 
     For each claim with non-empty evidence, emit one (claim, doc) pair per
     evidence doc. The label is the unique label across that doc's evidence

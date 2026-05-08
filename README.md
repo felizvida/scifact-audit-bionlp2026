@@ -16,12 +16,12 @@ This repository releases the corrected annotations, the LLM screen outputs, the 
 
 ```
 .
-├── paper/                 The camera-ready PDF, .tex source, .bib, ACL style files
-├── corrections/           The headline output: corrected gold labels (JSON)
+├── paper/                 Camera-ready PDF, .tex source, .bib, ACL style files
+├── corrections/           Headline output: corrected gold labels (JSON)
 ├── data/                  Helper to fetch SciFact (dataset itself not vendored)
-├── audit/                 Stage 1 source: original Elixir LLM-screen code
+├── audit/                 Stage 1: LLM screen + binary classifier (Python, OpenAI)
 ├── results/               Cached outputs from each stage of the audit
-│   ├── stage1_llm_screen/   GPT-5.4-mini audit JSON + per-pair predictions
+│   ├── stage1_llm_screen/   GPT-5.4 audit JSON + per-pair predictions
 │   ├── stage2_manual_review/ CSVs of the manual-triage step
 │   └── stage3_revision/     Haiku 4.5 cross-model F1 + contamination probe
 ├── revision/              Python scripts for the BioNLP-revision experiments
@@ -34,33 +34,45 @@ This repository releases the corrected annotations, the LLM screen outputs, the 
 
 ## Reproducing the analysis
 
-The original Stage-1 LLM screen used GPT-5.4-mini via Elixir; its raw output is in `results/stage1_llm_screen/` so you can skip Stage 1 and re-derive Stages 2–3 from the cached predictions.
-
-### Stage 2 + 3 (Python — recommended for reproduction)
+Everything is in Python. Install once and pick the stage you want:
 
 ```bash
-# 1. Fetch the SciFact dataset (~50 MB)
+# Setup (~30 seconds + ~50 MB SciFact download)
 bash data/download_scifact.sh
-
-# 2. Install Python deps
 pip install -r revision/requirements.txt
-
-# 3. Recompute the binomial tests, Clopper–Pearson CIs, and sensitivity table
-python3 revision/stats_compute.py
-
-# 4. Re-build the blind annotator packets (deterministic, seed=42)
-python3 revision/build_packets.py
-
-# 5. Re-run the Haiku 4.5 cross-model F1 + contamination probe (~$0.50 on Anthropic API)
-export CLAUDE_API_KEY=sk-ant-...
-python3 revision/run_haiku_experiments.py
 ```
 
-`stats_compute.py` and `build_packets.py` are deterministic and offline; `run_haiku_experiments.py` is the only script that calls a paid API.
+### Offline stages (no API, deterministic)
 
-### Stage 1 (Elixir — original screen)
+```bash
+# Recompute the binomial tests, Clopper–Pearson CIs, and sensitivity table
+python3 revision/stats_compute.py
 
-The original GPT-5.4-mini screen lives in `audit/elixir/`. It depends on the `colonyOS` umbrella's `ClaimVerifier` and Elixir runtime infrastructure that is not vendored here; the cached JSON output (`results/stage1_llm_screen/scifact_audit_gpt-5.4-mini_n209_*.json`) contains the screen verdicts, per-pair reasoning, and suggested labels, which is what downstream stages consume. The Elixir source is included for transparency about the prompt template and structured-output schema. To re-run from scratch you would need to port `scifact_auditor.ex` into a standalone Mix project or rewrite it against the OpenAI Responses API in any language.
+# Re-build the blind annotator packets (deterministic with seed=42)
+python3 revision/build_packets.py
+```
+
+### Stage 1 — LLM screen + binary classifier (paid OpenAI calls)
+
+```bash
+export OPENAI_API_KEY=sk-...
+python3 audit/screen.py                             # ~$0.11 — produces audit JSON
+python3 audit/predict_binary.py --model gpt-5.4-mini  # ~$0.05 — paper reports 84.9 → 88.7 F1
+python3 audit/predict_binary.py --model gpt-5.4-nano  # ~$0.02 — paper reports 79.5 → 81.2 F1
+```
+
+Add `--limit 2` to either for a sub-cent smoke test. Every script writes to `results/stage1_llm_screen/` by default.
+
+### Stage 3 — cross-model verification (paid Anthropic calls)
+
+```bash
+export CLAUDE_API_KEY=sk-ant-...
+python3 revision/run_haiku_experiments.py           # ~$0.54 — Haiku 4.5 F1 + contamination probe
+```
+
+### Cached outputs
+
+If you don't want to spend any API budget, every stage's output is already committed under [`results/`](results/). [`revision/stats_compute.py`](revision/stats_compute.py) and [`revision/build_packets.py`](revision/build_packets.py) read those cached outputs and reproduce every number in the paper offline.
 
 ## Citation
 
