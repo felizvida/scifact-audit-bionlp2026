@@ -1,0 +1,2119 @@
+{
+  "timestamp": "2026-04-02T14:33:55.931064Z",
+  "split": "dev",
+  "usage": {
+    "input_tokens": 172436,
+    "output_tokens": 28155,
+    "cost_usd": 0.071264
+  },
+  "model": "gpt-5.4-mini",
+  "results": [
+    {
+      "id": 3,
+      "error_type": "other",
+      "reasoning": "The evidence supports the general idea that rare variants can create synthetic associations and that such variants may contribute to GWAS signals, which is consistent with mapping genetic sequence variation involving rare variants. However, the claim adds that the 1,000 Genomes Project specifically 'enables mapping' and that these rare variants have 'larger penetrance effects than common variants,' neither of which is directly stated in the provided evidence. The paper discusses rare causal mutations and synthetic associations, but it does not compare penetrance effects between rare and common variants or mention the 1,000 Genomes Project by name. So the label is not clearly wrong, but it is somewhat overstated relative to the evidence.",
+      "correct_label": "ambiguous",
+      "claim": "1,000 genomes project enables mapping of genetic sequence variation consisting of rare variants with larger penetrance effects than common variants.",
+      "gold_label": "SUPPORT",
+      "doc_id": "14717500",
+      "assessment": "debatable"
+    },
+    {
+      "id": 5,
+      "error_type": "none",
+      "reasoning": "The evidence reports 16 positives out of 32,441 appendix samples, corresponding to an overall prevalence of 493 per million. That is approximately 1 in 2,028, which is effectively the same as 1/2000 at the level of precision used in the claim. The claim is a rounded restatement of the reported prevalence in the UK sample, so the SUPPORT label is appropriate. There is no meaningful mismatch in direction or magnitude.",
+      "correct_label": "support",
+      "claim": "1/2000 in UK have abnormal PrP positivity.",
+      "gold_label": "SUPPORT",
+      "doc_id": "13734012",
+      "assessment": "agree"
+    },
+    {
+      "id": 42,
+      "error_type": "direction_reversed",
+      "reasoning": "The evidence states the opposite of the claim: in homozygous alpha(+)-thalassaemia, increased microerythrocyte (erythrocyte) count and microcytosis contribute to protection against severe malarial anemia, not increased vulnerability. The abstract explicitly says this hematological profile reduces the risk of SMA (relative risk 0.52) and may contribute substantially to protection. Therefore the gold label CONTRADICT is correct, and the claim is contradicted by the paper.",
+      "correct_label": "contradict",
+      "claim": "A high microerythrocyte count raises vulnerability to severe anemia in homozygous alpha (+)- thalassemia trait subjects.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "18174210",
+      "assessment": "disagree"
+    },
+    {
+      "id": 48,
+      "error_type": "numerical_mismatch",
+      "reasoning": "The evidence reports an estimated prevalence of 493 per million population, with a 95% CI of 282 to 801 per million, not a fixed total of 1,000 people. For the UK population, 493 per million would imply many more than 1,000 carriers overall, so the claim’s number is not supported by the paper. The paper also frames this as prevalence of abnormal PrP indicating vCJD carrier status, rather than an exact count of asymptomatic carriers. Therefore the gold CONTRADICT label is correct, but the claim is numerically imprecise and the mismatch is the reason.",
+      "correct_label": "contradict",
+      "claim": "A total of 1,000 people in the UK are asymptomatic carriers of vCJD infection.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "13734012",
+      "assessment": "disagree"
+    },
+    {
+      "id": 49,
+      "error_type": "causal_overclaim",
+      "reasoning": "The evidence supports that ADAR1 binds/forms a complex with Dicer and that this interaction increases Dicer-mediated pre-miRNA cleavage. However, the claim as written says \"ADAR1 binds to Dicer to cleave pre-miRNA,\" which can be read as ADAR1 itself performing the cleavage or as a direct functional purpose statement. The paper shows ADAR1-Dicer binding and enhancement of Dicer's cleavage activity, not that ADAR1 alone cleaves pre-miRNA. So the gold SUPPORT label is somewhat debatable because the wording is imprecise and slightly overstates the mechanism.",
+      "correct_label": "support",
+      "claim": "ADAR1 binds to Dicer to cleave pre-miRNA.",
+      "gold_label": "SUPPORT",
+      "doc_id": "5953485",
+      "assessment": "debatable"
+    },
+    {
+      "id": 50,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that Aire is inducibly expressed in human and mouse tumor keratinocytes, which are skin tumor cells. This clearly supports the claim that AIRE is expressed in some skin tumors. The claim is modest and does not overgeneralize beyond the evidence. A domain expert would likely agree with the SUPPORT label.",
+      "correct_label": "support",
+      "claim": "AIRE is expressed in some skin tumors.",
+      "gold_label": "SUPPORT",
+      "doc_id": "12580014",
+      "assessment": "agree"
+    },
+    {
+      "id": 51,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that ALDH1 expression in 577 breast carcinomas correlated with poor prognosis, which is the opposite of better outcomes. The paper title also explicitly describes ALDH1 as a predictor of poor clinical outcome. There is no ambiguity here: higher ALDH1 expression is associated with worse, not better, breast cancer outcomes. The gold label CONTRADICT is therefore correct.",
+      "correct_label": "contradict",
+      "claim": "ALDH1 expression is associated with better breast cancer outcomes.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "45638119",
+      "assessment": "agree"
+    },
+    {
+      "id": 53,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that ALDH1 expression detected by immunostaining correlated with poor prognosis in a series of 577 breast carcinomas. This matches the claim that ALDH1 expression is associated with poorer prognosis in breast cancer. The wording is appropriately cautious because it says \"associated with\" rather than implying causation. A domain expert would likely accept the gold SUPPORT label.",
+      "correct_label": "support",
+      "claim": "ALDH1 expression is associated with poorer prognosis in breast cancer.",
+      "gold_label": "SUPPORT",
+      "doc_id": "45638119",
+      "assessment": "agree"
+    },
+    {
+      "id": 54,
+      "error_type": "direction_reversed",
+      "reasoning": "The evidence directly states the opposite of the claim: AMPK activity is lower in fibrotic regions, and pharmacological activation of AMPK lowers fibrotic activity in human IPF myofibroblasts. It also reports that metformin accelerates resolution of established lung fibrosis in an AMPK-dependent manner. Thus, AMPK activation appears to reduce, not increase, lung fibrosis-related pathology. The gold label CONTRADICT is therefore correct.",
+      "correct_label": "contradict",
+      "claim": "AMP-activated protein kinase (AMPK) activation increases inflammation-related fibrosis in the lungs.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "49556906",
+      "assessment": "agree"
+    },
+    {
+      "id": 56,
+      "error_type": "other",
+      "reasoning": "The evidence clearly supports that APOE4 expression in iPSC-derived human neurons increases tau phosphorylation and causes GABAergic neuron degeneration. It also states that ApoE4 increased Aβ production in human neurons, so the 'AlphaBeta production' part is broadly supported if this refers to amyloid-β. However, the abstract explicitly says tau phosphorylation was 'unrelated to their increased production of amyloid-β peptides,' which makes the causal phrasing in the claim misleading: the evidence does not show that increased Aβ production causes tau phosphorylation or degeneration. Because the claim bundles supported effects with an unsupported causal linkage, the gold SUPPORT label is somewhat debatable rather than clearly correct.",
+      "correct_label": "support",
+      "claim": "APOE4 expression in iPSC-derived neurons increases AlphaBeta production and tau phosphorylation causing GABA neuron degeneration.",
+      "gold_label": "SUPPORT",
+      "doc_id": "4709641",
+      "assessment": "debatable"
+    },
+    {
+      "id": 57,
+      "error_type": "causal_overclaim",
+      "reasoning": "The evidence supports that ApoE4-expressing iPSC-derived human neurons have higher tau phosphorylation and show GABAergic neuron degeneration. However, it explicitly says the increased tau phosphorylation was unrelated to increased Aβ production, so the claim’s wording that APOE4 expression increases \"AlphaBeta production and tau phosphorylation\" as a linked mechanism is not supported. The paper also does not state that APOE4 expression delays GABA neuron degeneration; rather, it reports degeneration, with rescue upon converting ApoE4 to ApoE3 or using a structure corrector. Thus the gold label CONTRADICT is too strong for the full claim as written, because part of the claim is supported while the causal/directional phrasing about delaying degeneration is not. The best label is ambiguous rather than outright contradict.",
+      "correct_label": "ambiguous",
+      "claim": "APOE4 expression in iPSC-derived neurons increases AlphaBeta production and tau phosphorylation, delaying GABA neuron degeneration.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "4709641",
+      "assessment": "disagree"
+    },
+    {
+      "id": 70,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that the PPM1D mutations cause enhanced suppression of p53 in response to ionizing radiation, and interprets the mutant alleles as hyperactive PPM1D isoforms. This supports the claim that activation of PPM1D suppresses p53 function. Although the paper discusses specific mutant alleles rather than generic activation, the functional direction is consistent with the claim. A domain expert would likely accept the gold SUPPORT label.",
+      "correct_label": "support",
+      "claim": "Activation of PPM1D suppresses p53 function.",
+      "gold_label": "SUPPORT",
+      "doc_id": "4414547",
+      "assessment": "agree"
+    },
+    {
+      "id": 70,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that PPM1D mutations attenuated p53 activation in vitro, which is consistent with suppressing p53 function. Although the claim says \"activation of PPM1D\" rather than \"PPM1D mutations,\" the paper describes gain-of-function PPM1D mutations that increase PPM1D's suppressive activity. This is a reasonable paraphrase of the reported finding and does not overstate the evidence. A domain expert would likely accept the SUPPORT label.",
+      "correct_label": "support",
+      "claim": "Activation of PPM1D suppresses p53 function.",
+      "gold_label": "SUPPORT",
+      "doc_id": "5956380",
+      "assessment": "agree"
+    },
+    {
+      "id": 100,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that sequential administration of 5-chloro-2-deoxyuridine and 5-iodo-2-deoxyuridine indicated that all HSCs segregate their chromosomes randomly. This matches the claim exactly in both subject and direction. Although the claim is broad, the paper’s wording supports the universal quantifier within the studied HSC population, so the gold SUPPORT label is appropriate.",
+      "correct_label": "support",
+      "claim": "All hematopoietic stem cells segregate their chromosomes randomly.",
+      "gold_label": "SUPPORT",
+      "doc_id": "4381486",
+      "assessment": "agree"
+    },
+    {
+      "id": 113,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that ACE inhibitor therapy \"can also be associated with a syndrome of functional renal insufficiency,\" which matches the claim that ACE inhibitors are associated with increased risk for functional renal insufficiency. The wording is slightly broader in the claim because it says \"increased risk,\" but the paper clearly describes this adverse effect as a recognized association and discusses risk factors for ACE inhibitor-induced functional ARF. There is no contradiction or numerical issue here. A domain expert would likely accept the gold SUPPORT label.",
+      "correct_label": "support",
+      "claim": "Angiotensin converting enzyme inhibitors are associated with increased risk for functional renal insufficiency.",
+      "gold_label": "SUPPORT",
+      "doc_id": "6157837",
+      "assessment": "agree"
+    },
+    {
+      "id": 115,
+      "error_type": "other",
+      "reasoning": "The evidence shows that anthrax spores can reaerosolize under common office activities and that this has implications for remediation and reoccupancy, which suggests they are not easy to dispose of once dispersed. The claim says they can be disposed of easily after dispersion, but the paper does not support that and instead emphasizes persistence and secondary aerosolization. This is a clear contradiction rather than support. The wording is somewhat broad, but the gold label of CONTRADICT is correct.",
+      "correct_label": "contradict",
+      "claim": "Anthrax spores can be disposed of easily after they are dispersed.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "33872649",
+      "assessment": "disagree"
+    },
+    {
+      "id": 118,
+      "error_type": "none",
+      "reasoning": "The claim states that antibiotic-induced alterations in the gut microbiome reduce resistance against Clostridium difficile, which is directly supported by the paper. The abstract explicitly says antibiotics reduce colonization resistance against pathogens including C. difficile and that antibiotic-mediated alteration of the gut microbiome favors C. difficile germination and growth. This is a close paraphrase of the evidence rather than an overreach. The gold label SUPPORT is therefore correct.",
+      "correct_label": "support",
+      "claim": "Antibiotic induced alterations in the gut microbiome reduce resistance against Clostridium difficile",
+      "gold_label": "SUPPORT",
+      "doc_id": "6372244",
+      "assessment": "agree"
+    },
+    {
+      "id": 124,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that antiretroviral therapy is strongly associated with a reduction in tuberculosis incidence in all baseline CD4 count categories, and the conclusion repeats that this holds across all CD4 count strata. The claim’s wording closely matches the paper’s conclusion and the meta-analysis results. There is no numerical or directional mismatch, and the broad-range phrasing is supported by the listed CD4 strata. A domain expert would likely accept the gold SUPPORT label.",
+      "correct_label": "support",
+      "claim": "Antiretroviral therapy reduces rates of tuberculosis across a broad range of CD4 strata.",
+      "gold_label": "SUPPORT",
+      "doc_id": "4883040",
+      "assessment": "agree"
+    },
+    {
+      "id": 129,
+      "error_type": "direction_reversed",
+      "reasoning": "The evidence directly states that open-access articles are more immediately recognized and cited than non-open-access articles, with a significant citation advantage in the 4 to 16 months after publication. That is the opposite of the claim that open access articles are less likely to be cited than traditional journals. The wording “traditional journals” is a bit imprecise, but the intended comparison is clearly OA versus non-OA/subscription-access articles, and the evidence supports the reverse direction. Therefore the gold label CONTRADICT is correct.",
+      "correct_label": "contradict",
+      "claim": "Articles published in open access format are less likely to be cited than traditional journals.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "27768226",
+      "assessment": "agree"
+    },
+    {
+      "id": 130,
+      "error_type": "none",
+      "reasoning": "The evidence directly supports the claim that open-access articles are more likely to be cited than non-open-access/traditional subscription articles. It reports a significant citation advantage for OA articles and explicitly states they are twice as likely to be cited in one interval and almost three times as likely in another. The claim is somewhat broad because the study focuses on a specific journal and time window, but the wording \"more likely to be cited\" is consistent with the evidence presented. A domain expert would likely accept the SUPPORT label given the quoted conclusions.",
+      "correct_label": "support",
+      "claim": "Articles published in open access format are more likely to be cited than traditional journals.",
+      "gold_label": "SUPPORT",
+      "doc_id": "27768226",
+      "assessment": "agree"
+    },
+    {
+      "id": 133,
+      "error_type": "none",
+      "reasoning": "The evidence states that Src expression stimulates podosome formation after PtdIns(3,4)P2 accumulation, and that podosomes are enriched in PtdIns(3,4)P2, which supports the claim that assembly is triggered by focal generation of phosphatidylinositol-3,4-biphosphate and activation of Src. The claim uses 'invadopodia,' while the paper discusses podosomes, but the abstract explicitly notes that podosomes are also termed invadopodia in cancer cells, making this terminology acceptable. The wording is somewhat mechanistic, but it is consistent with the reported sequential signals and does not overstate the evidence.",
+      "correct_label": "support",
+      "claim": "Assembly of invadopodia is triggered by focal generation of phosphatidylinositol-3,4-biphosphate and the activation of the nonreceptor tyrosine kinase Src.",
+      "gold_label": "SUPPORT",
+      "doc_id": "16280642",
+      "assessment": "agree"
+    },
+    {
+      "id": 137,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that adding a visual screening component did not improve self-reported visual problems, with a pooled odds ratio of 1.04 and confidence interval crossing 1. This supports the claim that asymptomatic visual impairment screening in elderly populations does not lead to improved vision, at least in the studied community-dwelling older adults. The conclusion that screening is not justified on present evidence is consistent with the claim. While the claim is slightly broader than the exact outcome measured (self-reported visual problems rather than objective vision), the gold label SUPPORT is still appropriate.",
+      "correct_label": "support",
+      "claim": "Asymptomatic visual impairment screening in elderly populations does not lead to improved vision.",
+      "gold_label": "SUPPORT",
+      "doc_id": "26016929",
+      "assessment": "agree"
+    },
+    {
+      "id": 141,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that the cortical representation of the speech envelope is enhanced by congruent audiovisual speech and that neural entrainment to the speech envelope is inhibited when the auditory and visual streams are incongruent. The claim that auditory entrainment is strengthened when people see congruent visual and auditory information is a faithful paraphrase of this finding. Although the paper focuses on speech and cortical entrainment rather than a broad general theory of all auditory entrainment, the wording here is close enough to the reported result. A domain expert would likely accept the SUPPORT label.",
+      "correct_label": "support",
+      "claim": "Auditory entrainment is strengthened when people see congruent visual and auditory information.",
+      "gold_label": "SUPPORT",
+      "doc_id": "14437255",
+      "assessment": "agree"
+    },
+    {
+      "id": 142,
+      "error_type": "direction_reversed",
+      "reasoning": "The evidence directly states that autologous MSC-treated groups had a significantly decreased risk of opportunistic infections compared with the control group receiving anti-IL-2 receptor antibody induction therapy (HR 0.42, 95% CI 0.20-0.85). The claim asserts the opposite direction—that MSC transplantation causes a higher rate of opportunistic infections than anti-IL-2 receptor antibodies—which is contradicted by the study. The wording is comparative and specific enough that the reversal is clear. A domain expert would agree with the gold CONTRADICT label.",
+      "correct_label": "contradict",
+      "claim": "Autologous transplantation of mesenchymal stem cells causes a higher rate of opportunistic infections than induction therapy with anti-interleukin-2 receptor antibodies.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "10582939",
+      "assessment": "agree"
+    },
+    {
+      "id": 143,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that autologous MSC-treated groups had a significantly decreased risk of opportunistic infections compared with the control group receiving anti-IL-2 receptor antibody induction therapy (HR 0.42, 95% CI 0.20-0.85, P=.02). The conclusion also explicitly says autologous MSCs compared with anti-IL-2 receptor antibody induction therapy resulted in decreased risk of opportunistic infection. The claim’s wording is consistent with the study’s comparison, and the direction of effect matches the gold label.",
+      "correct_label": "support",
+      "claim": "Autologous transplantation of mesenchymal stem cells causes fewer opportunistic infections than induction therapy with anti-interleukin-2 receptor antibodies.",
+      "gold_label": "SUPPORT",
+      "doc_id": "10582939",
+      "assessment": "agree"
+    },
+    {
+      "id": 146,
+      "error_type": "none",
+      "reasoning": "The evidence directly compares autologous mesenchymal stem cells with anti-IL-2 receptor antibody induction therapy in kidney transplant recipients. The reported biopsy-confirmed acute rejection rate was lower in both MSC groups (7.5% and 7.7%) than in the control group receiving anti-IL-2 receptor antibody (21.6%). The paper’s conclusion explicitly states that autologous MSCs compared with anti-IL-2 receptor antibody induction therapy resulted in a lower incidence of acute rejection. The claim is therefore supported as written, with no obvious overreach beyond the study population.",
+      "correct_label": "support",
+      "claim": "Autologous transplantation of mesenchymal stem cells has lower rates of rejection than induction therapy with anti-interleukin-2 receptor antibodies.",
+      "gold_label": "SUPPORT",
+      "doc_id": "10582939",
+      "assessment": "agree"
+    },
+    {
+      "id": 148,
+      "error_type": "none",
+      "reasoning": "The evidence explicitly states that chaperone-mediated autophagy (CMA) activity declines in aged organisms. The claim is a direct paraphrase of this statement and does not introduce any extra causal or quantitative detail. Although the paper focuses specifically on CMA rather than all forms of autophagy, the claim is broad but still supported by the cited sentence as written. A domain expert would likely accept the gold SUPPORT label.",
+      "correct_label": "support",
+      "claim": "Autophagy declines in aged organisms.",
+      "gold_label": "SUPPORT",
+      "doc_id": "1084345",
+      "assessment": "agree"
+    },
+    {
+      "id": 163,
+      "error_type": "generalization_beyond_evidence",
+      "reasoning": "The evidence supports a positive effect of bariatric surgery on depression specifically, with consistent postoperative decreases in depression prevalence and symptom severity. However, the claim is broader than the evidence because it says bariatric surgery has a positive impact on \"mental health\" in general, while the paper only directly addresses depression and does not establish improvement across mental health conditions overall. A domain expert would likely consider the gold SUPPORT label somewhat overgeneralized, though not entirely unreasonable if mental health is interpreted narrowly here. The safest assessment is that the claim is only partially supported and therefore debatable rather than clearly supported.",
+      "correct_label": "ambiguous",
+      "claim": "Bariatric surgery has a positive impact on mental health.",
+      "gold_label": "SUPPORT",
+      "doc_id": "18872233",
+      "assessment": "debatable"
+    },
+    {
+      "id": 171,
+      "error_type": "direction_reversed",
+      "reasoning": "The evidence clearly indicates the opposite of the claim: basophil activation promotes TH2 differentiation, amplifies autoantibody production, and contributes to lupus nephritis/disease activity in SLE. The abstract explicitly states that basophils and IgE autoantibodies are associated with increased disease activity and active lupus nephritis in patients with SLE. Therefore, the gold label CONTRADICT is correct. The claim that basophils 'counteract disease development' is not supported by the evidence and is reversed relative to the paper's conclusion.",
+      "correct_label": "contradict",
+      "claim": "Basophils counteract disease development in patients with systemic lupus erythematosus (SLE).",
+      "gold_label": "CONTRADICT",
+      "doc_id": "12670680",
+      "assessment": "agree"
+    },
+    {
+      "id": 179,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that birth weight was positively associated with breast cancer risk in birth-record-based studies, with a pooled RR of 1.06 per 0.5 kg increase and a significant linear trend. The conclusion also says the pooled analysis is consistent with birth size being an independent correlate of breast cancer risk in adulthood. Although the association is not uniform across all data sources, the claim is broad and the paper provides support for a positive association overall. A domain expert would likely accept the gold SUPPORT label.",
+      "correct_label": "support",
+      "claim": "Birth-weight is positively associated with breast cancer.",
+      "gold_label": "SUPPORT",
+      "doc_id": "16322674",
+      "assessment": "agree"
+    },
+    {
+      "id": 179,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that heavier birth weights were associated with increased breast cancer risk, with odds ratios above 1 for higher birth-weight categories. This is a positive association, which matches the claim that birth-weight is positively associated with breast cancer. The wording is broad, but the meta-analysis supports the direction of association as stated. There is no contradiction or numerical mismatch in the gold label.",
+      "correct_label": "support",
+      "claim": "Birth-weight is positively associated with breast cancer.",
+      "gold_label": "SUPPORT",
+      "doc_id": "17450673",
+      "assessment": "agree"
+    },
+    {
+      "id": 179,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that increased birthweight was associated with increased risk of breast cancer, with a relative risk of 1.15 (95% CI 1.09-1.21). This supports the claim that birth-weight is positively associated with breast cancer. The wording is sufficiently precise for the evidence provided, and there is no numerical or directional mismatch.",
+      "correct_label": "support",
+      "claim": "Birth-weight is positively associated with breast cancer.",
+      "gold_label": "SUPPORT",
+      "doc_id": "23557241",
+      "assessment": "agree"
+    },
+    {
+      "id": 179,
+      "error_type": "none",
+      "reasoning": "The evidence directly supports the claim that higher birth weight is positively associated with breast cancer risk. The abstract reports that most studies found a positive link, and the pooled relative risk of 1.23 for high versus low birth weight is above 1 with a confidence interval excluding 1, indicating a positive association. The claim is broad, but the evidence supports it as stated without requiring a stronger causal interpretation. Although the association appears stronger for premenopausal than postmenopausal breast cancer, that does not contradict the general claim.",
+      "correct_label": "support",
+      "claim": "Birth-weight is positively associated with breast cancer.",
+      "gold_label": "SUPPORT",
+      "doc_id": "27123743",
+      "assessment": "agree"
+    },
+    {
+      "id": 180,
+      "error_type": "direction_reversed",
+      "reasoning": "The evidence says that suppressing TDP-43 mitochondrial localization abolishes TDP-43-induced neuronal loss, i.e., it blocks the toxic effect rather than increasing it. The claim asserts the opposite causal direction: that blocking the interaction between TDP-43 and ND3/ND6 leads to increased neuronal loss. The paper also does not specifically test 'blocking the interaction' as the mechanism; it focuses on suppressing mitochondrial localization, which reduces toxicity. A domain expert would therefore judge the gold CONTRADICT label as incorrect for this claim as written.",
+      "correct_label": "support",
+      "claim": "Blocking the interaction between TDP-43 and respiratory complex I proteins ND3 and ND6 leads to increased TDP-43-induced neuronal loss.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "16966326",
+      "assessment": "disagree"
+    },
+    {
+      "id": 183,
+      "error_type": "none",
+      "reasoning": "The evidence supports the gold CONTRADICT label. The paper states that tissue-resident macrophages self-maintain locally throughout adult life with minimal contribution from circulating monocytes, and that monocytes do not significantly contribute to tissue macrophages in the steady state. The claim that bone marrow cells contribute to adult macrophage compartments is therefore contradicted by the main conclusion, even though the paper notes host macrophage expansion after bone marrow transplantation. That transplantation result does not imply a meaningful bone-marrow-derived contribution to adult macrophage compartments under steady-state conditions.",
+      "correct_label": "contradict",
+      "claim": "Bone marrow cells contribute to adult macrophage compartments.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "12827098",
+      "assessment": "agree"
+    },
+    {
+      "id": 185,
+      "error_type": "generalization_beyond_evidence",
+      "reasoning": "The claim says breast cancer development is determined exclusively by genetic factors, which is much stronger than what the paper addresses. The evidence shows that certain low-penetrance genetic risks did not vary significantly across ten environmental risk factors, but it does not establish that breast cancer is caused only by genetics or that environmental factors play no role. In fact, the study explicitly examines gene-environment interactions and mentions established environmental risk factors, which is inconsistent with an exclusivity claim. Thus the gold label CONTRADICT is correct.",
+      "correct_label": "contradict",
+      "claim": "Breast cancer development is determined exclusively by genetic factors.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "18340282",
+      "assessment": "agree"
+    },
+    {
+      "id": 208,
+      "error_type": "generalization_beyond_evidence",
+      "reasoning": "The evidence only shows that in this study, common CHEK2 haplotypes/tagSNPs were not convincingly associated with breast cancer risk. It does not support the broader claim that CHEK2 is not associated with breast cancer at all, because the abstract explicitly notes that a prior investigation had established a role for CHEK2 in breast cancer aetiology and reports a rare 1100delC mutation with an odds ratio above 2. The gold label SUPPORT is therefore too strong for the claim as written. A domain expert would likely judge the claim as overgeneralized rather than fully supported or contradicted by this paper.",
+      "correct_label": "contradict",
+      "claim": "CHEK2 is not associated with breast cancer.",
+      "gold_label": "SUPPORT",
+      "doc_id": "13519661",
+      "assessment": "disagree"
+    },
+    {
+      "id": 212,
+      "error_type": "negation_missed",
+      "reasoning": "The evidence says caloric restriction attenuates age-related methylation drift and that blood methylation age appeared 7 years younger than chronological age in caloric-restricted monkeys. That is the opposite of saying CR is associated with higher methylation age. The claim uses 'higher methylation age,' which would imply an increase, but the paper reports a younger/lower methylation age under caloric restriction. A domain expert would therefore reject the gold CONTRADICT label only if the claim were phrased as lower age; as written, the evidence contradicts the claim, so the dataset label is actually correct and the claim is reversed relative to the evidence.",
+      "correct_label": "contradict",
+      "claim": "CR is associated with higher methylation age.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "22038539",
+      "assessment": "disagree"
+    },
+    {
+      "id": 216,
+      "error_type": "direction_reversed",
+      "reasoning": "The evidence states the opposite of the claim: CX3CR1 signaling promoted T(H)2 survival in inflamed lungs. The title also says CX3CR1 is required by promoting T helper cell survival and maintenance, which supports a pro-survival role rather than impairment. The claim that CX3CR1 on Th2 cells impairs T cell survival is therefore contradicted by the paper. The wording is not merely imprecise; the direction of effect is reversed.",
+      "correct_label": "support",
+      "claim": "CX3CR1 on the Th2 cells impairs T cell survival",
+      "gold_label": "CONTRADICT",
+      "doc_id": "21366394",
+      "assessment": "disagree"
+    },
+    {
+      "id": 217,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that CX3CR1 signaling promoted T(H)2 survival in inflamed lungs. Since Th2 cells are T helper type 2 cells, this supports the claim that CX3CR1 on Th2 cells promotes T cell survival. The wording is slightly simplified, but not misleading in a way that changes the meaning. The gold label SUPPORT is appropriate.",
+      "correct_label": "support",
+      "claim": "CX3CR1 on the Th2 cells promotes T cell survival",
+      "gold_label": "SUPPORT",
+      "doc_id": "21366394",
+      "assessment": "agree"
+    },
+    {
+      "id": 218,
+      "error_type": "none",
+      "reasoning": "The evidence directly supports the claim that CX3CR1 on Th2 cells promotes airway inflammation. The abstract states that CX3CR1-blocking reagents prevented airway inflammation in CX3CR1-deficient recipients injected with WT Th2 cells, and that CX3CR1 signaling promoted Th2 survival in inflamed lungs. This provides a mechanistic basis for CX3CR1 expression on Th2 cells contributing to airway inflammation. The claim is slightly simplified, but not misleading given the paper’s findings.",
+      "correct_label": "support",
+      "claim": "CX3CR1 on the Th2 cells promotes airway inflammation.",
+      "gold_label": "SUPPORT",
+      "doc_id": "21366394",
+      "assessment": "agree"
+    },
+    {
+      "id": 219,
+      "error_type": "direction_reversed",
+      "reasoning": "The evidence indicates the opposite of the claim: CX3CR1 signaling promotes TH2 cell survival in inflamed lungs and is required for airway inflammation. CX3CR1-deficient mice or CX3CR1-blocked mice had reduced lung disease, and restoring CX3CR1-expressing TH2 cells restored asthma features. Thus CX3CR1 on TH2 cells does not suppress airway inflammation; it facilitates it. The gold CONTRADICT label is correct.",
+      "correct_label": "contradict",
+      "claim": "CX3CR1 on the Th2 cells suppresses airway inflammation.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "21366394",
+      "assessment": "agree"
+    },
+    {
+      "id": 230,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that individuals homozygous for the ALDH2 null variant drink considerably less alcohol than wild-type homozygotes or heterozygotes. The claim is a paraphrase of this finding, and although it says \"carriers\" and \"non-carries\" somewhat imprecisely, the intended meaning is consistent with the paper's description of the deficiency mutation reducing alcohol intake. There is no numerical or directional mismatch in the evidence. A domain expert would likely accept the SUPPORT label.",
+      "correct_label": "support",
+      "claim": "Carriers of the alcohol aldehyde dehydrogenase deficiency mutation drink less that non-carries.",
+      "gold_label": "SUPPORT",
+      "doc_id": "3067015",
+      "assessment": "agree"
+    },
+    {
+      "id": 233,
+      "error_type": "direction_reversed",
+      "reasoning": "The evidence states the opposite of the claim: in chickens, avian somatic cells possess an inherent sex identity and sexual differentiation is substantively cell autonomous. Since chickens are Galliformes, this directly supports cell-autonomous sex determination in somatic cells rather than its absence. The claim says it does not occur in Galliformes, but the cited paper explicitly demonstrates that it does, at least in chicken. A domain expert would therefore reject the gold CONTRADICT label as reversed relative to the evidence.",
+      "correct_label": "support",
+      "claim": "Cell autonomous sex determination in somatic cells does not occur in Galliformes.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "4388470",
+      "assessment": "disagree"
+    },
+    {
+      "id": 236,
+      "error_type": "generalization_beyond_evidence",
+      "reasoning": "The evidence supports cell-autonomous sex identity in avian somatic cells, but the claim specifically says this occurs in Passeriformes. The cited paper is about chickens, which are Galliformes, not Passeriformes, so the taxonomic scope is not directly supported by the evidence. A domain expert would likely view the broader avian conclusion as plausible, but the exact order named in the claim is not established here. Thus the gold label SUPPORT is too strong for the provided evidence.",
+      "correct_label": "ambiguous",
+      "claim": "Cell autonomous sex determination in somatic cells occurs in Passeriformes.",
+      "gold_label": "SUPPORT",
+      "doc_id": "4388470",
+      "assessment": "debatable"
+    },
+    {
+      "id": 239,
+      "error_type": "none",
+      "reasoning": "The evidence supports the claim that cellular/molecular aging is linked to an older appearance, because the paper reports that perceived age correlates significantly with leucocyte telomere length, a molecular biomarker of aging. It also concludes that perceived age is a robust biomarker of aging and correlates with aging phenotypes. Although the claim uses the broader phrase \"cellular aging,\" the evidence is consistent with that general idea rather than contradicting it. The wording is somewhat imprecise, but not enough to make the SUPPORT label incorrect.",
+      "correct_label": "support",
+      "claim": "Cellular aging closely links to an older appearance.",
+      "gold_label": "SUPPORT",
+      "doc_id": "14079881",
+      "assessment": "agree"
+    },
+    {
+      "id": 248,
+      "error_type": "none",
+      "reasoning": "The abstract explicitly states that whole-body energy expenditure was increased upon chenodeoxycholic acid (CDCA) treatment in 12 healthy female subjects. The claim matches the evidence closely and does not overstate the result beyond what is reported. Although the title emphasizes BAT activity, the abstract directly supports the whole-body energy expenditure component. There is no numerical or directional mismatch.",
+      "correct_label": "support",
+      "claim": "Chenodeosycholic acid treatment increases whole-body energy expenditure.",
+      "gold_label": "SUPPORT",
+      "doc_id": "1568684",
+      "assessment": "agree"
+    },
+    {
+      "id": 249,
+      "error_type": "direction_reversed",
+      "reasoning": "The evidence explicitly states that whole-body energy expenditure was increased upon chenodeoxycholic acid (CDCA) treatment, which is the opposite of the claim that it reduces energy expenditure. The title and abstract both support an increase in BAT activity and energy expenditure after CDCA administration. There is no indication of a decrease or reduction in whole-body energy expenditure in the provided evidence. Therefore the gold label should not be CONTRADICT; it should be SUPPORT for the opposite direction of the claim, but relative to the claim as written the evidence contradicts it only if the claim says 'reduces.'",
+      "correct_label": "contradict",
+      "claim": "Chenodeosycholic acid treatment reduces whole-body energy expenditure.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "1568684",
+      "assessment": "disagree"
+    },
+    {
+      "id": 261,
+      "error_type": "none",
+      "reasoning": "The evidence directly supports the claim: chronic exercise training increased endothelium-dependent vasodilation in coronary resistance arteries, and the effect was mediated by the nitric oxide synthase pathway. The conclusion explicitly states that exercise training enhances bradykinin-induced vasodilation through increased nitric oxide production. Although the claim says 'alters endothelial function' and 'improving vasodilating mechanisms mediated by NO,' this is a fair paraphrase of the paper's findings. There is no obvious numerical or directional mismatch.",
+      "correct_label": "support",
+      "claim": "Chronic aerobic exercise alters endothelial function, improving vasodilating mechanisms mediated by NO.",
+      "gold_label": "SUPPORT",
+      "doc_id": "10697096",
+      "assessment": "agree"
+    },
+    {
+      "id": 261,
+      "error_type": "none",
+      "reasoning": "The evidence directly supports the claim that chronic exercise training improves endothelial function in this model. The abstract reports that exercise training enhanced bradykinin-mediated relaxation of collateral-dependent arterioles, which is an endothelium-dependent vasodilatory response. It also states this improvement was most likely due to effects on ecNOS mRNA expression and increased NO production, matching the claim’s reference to vasodilating mechanisms mediated by NO. Although the study is in porcine coronary arterioles rather than a broad human population, the claim is phrased generally enough to be consistent with the evidence.",
+      "correct_label": "support",
+      "claim": "Chronic aerobic exercise alters endothelial function, improving vasodilating mechanisms mediated by NO.",
+      "gold_label": "SUPPORT",
+      "doc_id": "1122279",
+      "assessment": "agree"
+    },
+    {
+      "id": 274,
+      "error_type": "none",
+      "reasoning": "The evidence directly addresses varenicline plus bupropion versus varenicline monotherapy and reports 52-week abstinence outcomes. Although the combination group had numerically higher abstinence rates, both outcomes at 52 weeks were explicitly not statistically significant (P = .11 and P = .08), and the paper concludes that neither outcome was significantly different at 52 weeks. The claim says 'significantly higher long-term abstinence rates at 52 weeks,' which is not supported by the evidence. The gold label CONTRADICT is therefore correct.",
+      "correct_label": "contradict",
+      "claim": "Combination nicotine replacement therapies with varenicline or bupropion lead to significantly higher long-term abstinence rates at 52 weeks than varenicline monotherapy.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "11614737",
+      "assessment": "agree"
+    },
+    {
+      "id": 275,
+      "error_type": "generalization_beyond_evidence",
+      "reasoning": "The evidence is about a dual PI3K/mTOR inhibitor (NVP-BEZ235) and its activity in cancer cells with activating PI3K mutations, especially HER2-amplified/PI3K-mutant breast cancer models. It does not evaluate a combination of PI3K and MEK1/2 inhibitors, nor does it address KRAS-mutant tumors specifically. The claim therefore overgeneralizes far beyond the cited paper and changes both the drug regimen and the tumor genotype. A domain expert would not treat this abstract as support for the stated claim.",
+      "correct_label": "ambiguous",
+      "claim": "Combining phosphatidylinositide 3-kinase and MEK 1/2 inhibitors is effective at treating KRAS mutant tumors.",
+      "gold_label": "SUPPORT",
+      "doc_id": "14241418",
+      "assessment": "disagree"
+    },
+    {
+      "id": 275,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that combining a PI3K-pathway inhibitor (NVP-BEZ235) with a MEK inhibitor produced marked synergy in shrinking Kras-mutant lung cancers, and concludes that such combinations may effectively treat KRAS mutated lung cancers. Although the paper uses a dual PI3K/mTOR inhibitor rather than a pure PI3K inhibitor, the claim is broad enough to match the evidence’s therapeutic conclusion. The wording 'effective at treating' is supported by the reported tumor regression/shrinking in vivo.",
+      "correct_label": "support",
+      "claim": "Combining phosphatidylinositide 3-kinase and MEK 1/2 inhibitors is effective at treating KRAS mutant tumors.",
+      "gold_label": "SUPPORT",
+      "doc_id": "4961038",
+      "assessment": "agree"
+    },
+    {
+      "id": 279,
+      "error_type": "none",
+      "reasoning": "The evidence explicitly states that the genome sequence is 7489 bp in size, which directly supports the claim that Commelina yellow mottle virus (ComYMV) genome consists of 7489 base pairs. The only minor issue is a spelling variation in the virus name in the abstract ('Commelina mellow mottle virus' appears to be a typo for Commelina yellow mottle virus), but the key numerical claim matches exactly. There is no numerical mismatch or overgeneralization here. A domain expert would accept the gold label as SUPPORT.",
+      "correct_label": "support",
+      "claim": "Commelina yellow mottle virus' (ComYMV) genome consists of 7489 baise pairs.",
+      "gold_label": "SUPPORT",
+      "doc_id": "14376683",
+      "assessment": "agree"
+    },
+    {
+      "id": 295,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that dendritic cells and ILCs engage in a previously unrecognized layer of cellular crosstalk, and that this interaction is part of the mechanism regulating intestinal ILC homeostasis and colitis. The claim is broad, but it is supported by the paper’s conclusion that T-bet regulates the complex interplay between mucosal dendritic cells, ILCs, and the intestinal microbiota. A domain expert would reasonably accept this as evidence that DC–ILC crosstalk is important in intestinal homeostasis, even though the paper focuses on inflammatory regulation rather than homeostasis in a healthy-state sense.",
+      "correct_label": "support",
+      "claim": "Crosstalk between dendritic cells (DCs) and innate lymphoid cells (ILCs) is important in the regulation of intestinal homeostasis.",
+      "gold_label": "SUPPORT",
+      "doc_id": "20310709",
+      "assessment": "agree"
+    },
+    {
+      "id": 298,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that during mitochondrial-pathway apoptosis, mitochondrial outer membrane permeabilization causes release of cytochrome c and other proteins from the mitochondrial intermembrane space. Since cytochrome c is released as part of apoptosis, and the destination is implied to be outside the mitochondrion into the cytosol, the claim is supported. The wording is consistent with standard apoptosis biology and does not introduce an unsupported causal overreach. A domain expert would accept the gold SUPPORT label.",
+      "correct_label": "support",
+      "claim": "Cytochrome c is released from the mitochondrial intermembrane space to cytosol during apoptosis.",
+      "gold_label": "SUPPORT",
+      "doc_id": "39381118",
+      "assessment": "agree"
+    },
+    {
+      "id": 314,
+      "error_type": "none",
+      "reasoning": "The evidence supports the core mechanism in the claim: cytidine deamination by APOBEC3G during reverse transcription causes G-to-A hypermutation in nascent retroviral DNA. The claim’s wording about the “minus strand of viral DNA” is consistent with the standard interpretation that deamination of cytidines on the minus-strand cDNA yields G-to-A mutations in the plus-strand viral genome. The paper explicitly states that APOBEC3G triggers G-to-A hypermutation in nascent retroviral DNA and that this is a broad antiviral defense mechanism. While the claim uses the stronger phrase “catastrophic,” the evidence also describes the effect as lethal editing/non-infectious virus, so the gold SUPPORT label is appropriate.",
+      "correct_label": "support",
+      "claim": "Deamination of cytidine to uridine on the minus strand of viral DNA results in catastrophic G-to-A mutations in the viral genome.",
+      "gold_label": "SUPPORT",
+      "doc_id": "4347374",
+      "assessment": "agree"
+    },
+    {
+      "id": 327,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that Treg-cell-specific deletion of integrin αvβ8 did not result in a spontaneous inflammatory phenotype. This matches the claim closely and without any obvious overreach. The wording is precise enough that the paper’s statement supports it as written. There is no numerical or directional mismatch.",
+      "correct_label": "support",
+      "claim": "Deletion of αvβ8 does not result in a spontaneous inflammatory phenotype.",
+      "gold_label": "SUPPORT",
+      "doc_id": "17997584",
+      "assessment": "agree"
+    },
+    {
+      "id": 338,
+      "error_type": "direction_reversed",
+      "reasoning": "The evidence directly states the opposite of the claim: dexamethasone was associated with an increased risk of postoperative bleeding, not a decreased risk. The reported bleeding rates were higher in at least some dexamethasone groups than placebo, and the conclusion explicitly says increased risk. This is a clear contradiction rather than a debatable interpretation.",
+      "correct_label": "contradict",
+      "claim": "Dexamethasone decreases risk of postoperative bleeding.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "23349986",
+      "assessment": "agree"
+    },
+    {
+      "id": 343,
+      "error_type": "other",
+      "reasoning": "The evidence is about long-term morbidity and mortality after unstable angina/non-Q-wave MI, and it does not mention bleeding events at all. The claim specifically asserts increased short-term and long-term risk for bleeding, which is unsupported by the provided abstract. This is not a minor wording issue: the outcome is entirely different from the outcomes reported in the paper. A domain expert would not infer bleeding risk from this evidence.",
+      "correct_label": "contradict",
+      "claim": "Diabetic patients with acute coronary syndrome experience increased short-term and long-term risk for bleeding events.",
+      "gold_label": "SUPPORT",
+      "doc_id": "5884524",
+      "assessment": "disagree"
+    },
+    {
+      "id": 380,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that memory CD4+ T cells enhance production of inflammatory cytokines and chemokines in the lung, and that during influenza infection this leads to early control of virus. The claim is a close paraphrase of this finding, with no obvious overreach or numerical mismatch. Although the wording says \"improves viral control\" rather than \"leads to early control,\" the meaning is consistent with the abstract's conclusion. A domain expert would likely accept the gold SUPPORT label.",
+      "correct_label": "support",
+      "claim": "Enhanced early production of inflammatory chemokines improves viral control in the lung.",
+      "gold_label": "SUPPORT",
+      "doc_id": "19005293",
+      "assessment": "agree"
+    },
+    {
+      "id": 385,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that the epigenetic therapy combination was used in mouse models of NSCLC and that it \"reverses tumor immune evasion and modulates T cell exhaustion state towards memory and effector T cell phenotypes.\" This is a clear example of epigenetic modulating agents affecting the antitumor immune response in a cancer model system. The claim is broad, but it is supported by the abstract’s description of immune modulation in a cancer model. There is no obvious numerical or directional mismatch.",
+      "correct_label": "support",
+      "claim": "Epigenetic modulating agents (EMAs) modulate antitumor immune response in a cancer model system.",
+      "gold_label": "SUPPORT",
+      "doc_id": "9955779",
+      "assessment": "agree"
+    },
+    {
+      "id": 386,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that most errors occurred when giving bolus doses or making up drugs that required multiple-step preparation. This matches the claim that errors in peripheral IV drug administration are most common during bolus administration and multiple-step medicine preparations. The wording is slightly generalized to \"peripheral IV drug administration,\" but the cited study is about intravenous drug administration and the specific error-prone stages named in the claim are explicitly supported. A domain expert would likely accept the gold label as correct.",
+      "correct_label": "support",
+      "claim": "Errors in peripheral IV drug administration are most common during bolus administration and multiple-step medicine preparations.",
+      "gold_label": "SUPPORT",
+      "doc_id": "16495649",
+      "assessment": "agree"
+    },
+    {
+      "id": 399,
+      "error_type": "none",
+      "reasoning": "The evidence directly supports an association between higher exposure to fine particulate matter (PM2.5) and prevalent anxiety symptoms. The claim uses cautious wording (“is relate to”), which matches the observational finding of association rather than causation. The paper reports significantly increased odds of high anxiety symptoms with higher PM2.5 exposure, so the SUPPORT label is appropriate. There is no numerical or directional mismatch in the claim as stated.",
+      "correct_label": "support",
+      "claim": "Exposure to fine particulate air pollution is relate to anxiety prevalence.",
+      "gold_label": "SUPPORT",
+      "doc_id": "791050",
+      "assessment": "agree"
+    },
+    {
+      "id": 415,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that the risk of dementia associated with the exposure was most pronounced in APOE epsilon4 carriers, with a substantially elevated adjusted relative risk for dementia (RR 4.20, 95% CI 1.97-8.92). While the paper is about reproductive period rather than APOE4 status alone, the key evidence supports the broader claim that female APOE4 carriers have increased dementia risk in this context. There is no contradiction in the provided text, and the gold SUPPORT label is consistent with the cited result.",
+      "correct_label": "support",
+      "claim": "Female carriers of the Apolipoprotein E4 (APOE4) allele have increased risk for dementia.",
+      "gold_label": "SUPPORT",
+      "doc_id": "6309659",
+      "assessment": "agree"
+    },
+    {
+      "id": 431,
+      "error_type": "other",
+      "reasoning": "The evidence shows that FOXO3 responds to oxidative stress and that SIRT1 inhibits FOXO3-induced cell death, but it does not state that FoxO3a activation in neuronal death is mediated by ROS. The claim introduces neuronal death and a specific mediation mechanism (ROS) that are not demonstrated in the abstract. At best, the paper supports a broader link between oxidative stress and FOXO3 regulation, not the exact causal statement in the claim. Therefore the gold SUPPORT label is not justified from the provided evidence.",
+      "correct_label": "ambiguous",
+      "claim": "FoxO3a activation in neuronal death is mediated by reactive oxygen species (ROS).",
+      "gold_label": "SUPPORT",
+      "doc_id": "28937856",
+      "assessment": "disagree"
+    },
+    {
+      "id": 436,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that excess, non-chromatin-bound histones are rapidly degraded in a Rad53 kinase-dependent manner. This matches the claim that free histones are degraded by a Rad53-dependent mechanism. The phrase \"once DNA has been replicated\" is somewhat broader than the evidence, but the abstract does indicate histone accumulation when DNA replication slows down or stops, which is consistent with regulation after replication. There is no clear contradiction or numerical mismatch, so the gold SUPPORT label is appropriate.",
+      "correct_label": "support",
+      "claim": "Free histones are degraded by a Rad53-dependent mechanism once DNA has been replicated.",
+      "gold_label": "SUPPORT",
+      "doc_id": "14637235",
+      "assessment": "agree"
+    },
+    {
+      "id": 443,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that GATA-3 is required for the maintenance of a normal number of LT-HSCs and for their entry into the cell cycle. That is a clear functional role in hematopoietic stem cell maintenance and cycling, which supports the broader claim that GATA-3 is important for HSC function. The claim is slightly general, but not beyond what the abstract supports. A domain expert would likely agree with the SUPPORT label.",
+      "correct_label": "support",
+      "claim": "GATA-3 is important for hematopoietic stem cell (HSC) function.",
+      "gold_label": "SUPPORT",
+      "doc_id": "10165258",
+      "assessment": "agree"
+    },
+    {
+      "id": 452,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that gene expression is fundamentally stochastic and causes cell-to-cell variation in mRNA and protein levels. That clearly contradicts the claim that gene expression does not vary appreciably across genetically identical cells. The claim is broad but not overly nuanced here; the paper explicitly supports variability among genetically identical cells. A domain expert would agree with the CONTRADICT label.",
+      "correct_label": "contradict",
+      "claim": "Gene expression does not vary appreciably across genetically identical cells.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "12804937",
+      "assessment": "agree"
+    },
+    {
+      "id": 452,
+      "error_type": "generalization_beyond_evidence",
+      "reasoning": "The evidence shows that genetically identical cells can display markedly different phenotypes, but it does not directly state that gene expression itself varies appreciably across such cells. Phenotypic differences may arise from gene expression differences, but that inference is not explicit in the provided text. The claim is therefore broader and more specific than the evidence supports, so labeling it CONTRADICT is too strong. A more accurate assessment would be that the evidence is ambiguous with respect to gene expression variation.",
+      "correct_label": "ambiguous",
+      "claim": "Gene expression does not vary appreciably across genetically identical cells.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "464511",
+      "assessment": "disagree"
+    },
+    {
+      "id": 475,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that glycolysis provides ATP for fast axonal transport and describes a localized glycolytic machinery supplying energy. While the claim uses the broader phrase \"one of the primary glycometabolic pathways in cells,\" this is consistent with glycolysis being a central cellular glucose-metabolism pathway. The paper does not explicitly rank glycolysis among all glycometabolic pathways, but it clearly supports glycolysis as a major pathway rather than contradicting it. A domain expert would likely accept the gold SUPPORT label.",
+      "correct_label": "support",
+      "claim": "Glycolysis is one of the primary glycometabolic pathways in cells.",
+      "gold_label": "SUPPORT",
+      "doc_id": "18678095",
+      "assessment": "agree"
+    },
+    {
+      "id": 501,
+      "error_type": "none",
+      "reasoning": "The claim says headaches are not correlated with cognitive impairment, and the paper explicitly states that evidence was lacking for cognitive impairment for any headache type, with or without brain lesions. This is a direct match to the claim’s negative association wording. The evidence does not report a significant correlation between headache and cognitive impairment, so the SUPPORT label is appropriate. The claim is slightly broad, but the study’s conclusion covers headache of any type in this population-based sample.",
+      "correct_label": "support",
+      "claim": "Headaches are not correlated with cognitive impairment.",
+      "gold_label": "SUPPORT",
+      "doc_id": "17930286",
+      "assessment": "agree"
+    },
+    {
+      "id": 513,
+      "error_type": "direction_reversed",
+      "reasoning": "The evidence discusses low cardiorespiratory fitness, not high fitness. It states that low fitness is an established risk factor for cardiovascular disease morbidity and mortality and is associated with increased prevalence of CVD risk factors. This does not support the claim that high cardiopulmonary fitness causes increased mortality; if anything, the cited text points in the opposite direction. The claim also introduces a causal relationship and mortality outcome that are not directly addressed by the evidence, making the gold CONTRADICT label inappropriate as written.",
+      "correct_label": "support",
+      "claim": "High cardiopulmonary fitness causes increased mortality rate.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "13230773",
+      "assessment": "disagree"
+    },
+    {
+      "id": 516,
+      "error_type": "direction_reversed",
+      "reasoning": "The claim says high CRP reduces the risk of exacerbations in COPD, but the evidence states the opposite: elevated inflammatory biomarkers, including CRP, were associated with increased risk of frequent exacerbations. The abstract’s conclusion explicitly says simultaneously elevated levels of CRP, fibrinogen, and leukocyte count were associated with increased risk of exacerbations. Although the study considers a combination of biomarkers rather than CRP alone in the key conclusion, the direction of effect for high CRP is clearly not protective. Therefore the gold label CONTRADICT is correct.",
+      "correct_label": "contradict",
+      "claim": "High levels of CRP reduces the risk of exacerbations in chronic obstructive pulmonary disease (COPD).",
+      "gold_label": "CONTRADICT",
+      "doc_id": "29564505",
+      "assessment": "agree"
+    },
+    {
+      "id": 521,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that a single baseline measurement of the high-sensitivity troponin T assay may not be appropriate for patients presenting less than three hours after symptom onset. This aligns with the claim that HSCT-T dosage may not be diagnostic when symptoms began less than 3 hours before acute myocardial injury. The wording is slightly imprecise because the paper refers to symptom onset and acute myocardial infarction rather than 'acute myocardial injury (AMI),' but the intended meaning is consistent. There is no substantive contradiction in the evidence.",
+      "correct_label": "support",
+      "claim": "High-sensitivity cardiac troponin T (HSCT-T) dosage may not be diagnostic if the onset of symptoms occurs less than 3 hours before acute myocardial injury (AMI).",
+      "gold_label": "SUPPORT",
+      "doc_id": "34873974",
+      "assessment": "agree"
+    },
+    {
+      "id": 525,
+      "error_type": "none",
+      "reasoning": "The evidence directly supports the claim that histone demethylase recruitment is required to permit ligand-dependent activation of gene expression by nuclear receptors. The abstract explicitly states that an HMT-dependent inhibitory histone code imposes a requirement for specific histone demethylases, including LSD1, for ligand- and signal-dependent activation. The claim’s mention of a transient decrease in histone methylation is consistent with the described demethylase-dependent mechanism, and there is no obvious contradiction or numerical issue. A domain expert would likely accept the gold SUPPORT label.",
+      "correct_label": "support",
+      "claim": "Histone demethylase recruitment and a transient decrease in histone methylation is necessary for ligand-dependent induction of transcription by nuclear receptors.",
+      "gold_label": "SUPPORT",
+      "doc_id": "13639330",
+      "assessment": "agree"
+    },
+    {
+      "id": 528,
+      "error_type": "none",
+      "reasoning": "The evidence states that immunoglobulin G isolated from HAM/TSP patients identified hnRNP-A1 as the autoantigen, and that antibodies to hnRNP-A1 cross-reacted with HTLV-1 Tax. This directly supports the claim that HAM/TSP patients produce IgG antibodies that cross-react with an immunodominant epitope in Tax, since the paper links the patient IgG response to Tax via molecular mimicry. The wording is slightly compressed because the abstract does not explicitly say \"immunodominant epitope\" in the quoted sentence, but it does identify Tax as the relevant viral target associated with HAM/TSP. Overall, the gold label SUPPORT is appropriate.",
+      "correct_label": "support",
+      "claim": "Human T-lymphotropic virus type-I-associated myelopathy / tropical spastic paraparesis (HAM/TSP) patients produce Immunoglobulin G (IgG) antibodies which cross-react with an immunodominant epitope in Tax.",
+      "gold_label": "SUPPORT",
+      "doc_id": "5476778",
+      "assessment": "agree"
+    },
+    {
+      "id": 532,
+      "error_type": "negation_missed",
+      "reasoning": "The evidence shows that higher plasma fibrinogen is associated with worse graft patency and more occluded grafts, while lower fibrinogen is associated with higher patency. Since thrombosis/occlusion is the adverse outcome, this supports the claim that hyperfibrinogenemia does not decrease thrombosis rates; rather, it is linked to increased occlusion/thrombosis risk. The wording is slightly indirect because the paper reports patency and occlusion rather than explicitly 'thrombosis rates,' but the direction is clear enough for the gold CONTRADICT label to be correct.",
+      "correct_label": "contradict",
+      "claim": "Hyperfibrinogenemia decreases rates of femoropopliteal bypass thrombosis.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "12991445",
+      "assessment": "agree"
+    },
+    {
+      "id": 533,
+      "error_type": "none",
+      "reasoning": "The evidence directly supports the claim that higher fibrinogen is associated with worse femoropopliteal bypass graft patency, i.e., more occlusion/thrombosis. The abstract reports significantly higher fibrinogen in patients with occluded grafts and better patency when fibrinogen is below the median. Although the claim uses the term 'hyperfibrinogenemia' and 'thrombosis' rather than 'occlusion/patency,' these are consistent in context and do not introduce a substantive mismatch. A domain expert would reasonably accept this as supported by the study.",
+      "correct_label": "support",
+      "claim": "Hyperfibrinogenemia increases rates of femoropopliteal bypass thrombosis.",
+      "gold_label": "SUPPORT",
+      "doc_id": "12991445",
+      "assessment": "agree"
+    },
+    {
+      "id": 536,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that activation of orexin-synthesizing neurons is necessary for developing a panic-prone state in the rat panic model. Since hypocretin is the same system as orexin (Hcrt/orexin/hypocretin), the claim that hypocretin neurones induce a panic-prone state in rats is supported by the abstract. The wording is slightly simplified, but not enough to make the label debatable. A domain expert would likely accept this as supported by the paper's findings.",
+      "correct_label": "support",
+      "claim": "Hypocretin neurones induce panicprone state in rats.",
+      "gold_label": "SUPPORT",
+      "doc_id": "16056514",
+      "assessment": "agree"
+    },
+    {
+      "id": 539,
+      "error_type": "none",
+      "reasoning": "The evidence directly reports that, among older patients with type 2 diabetes, a history of severe hypoglycemic episodes was associated with a greater risk of dementia, with graded hazard ratios above 1 for increasing numbers of episodes. This supports the claim that hypoglycemia increases the risk of dementia in the studied population. The only nuance is that the paper addresses severe hypoglycemia and an association rather than definitive causation, but the benchmark claim is phrased broadly enough to match the evidence. A domain expert would likely accept the SUPPORT label here.",
+      "correct_label": "support",
+      "claim": "Hypoglycemia increases the risk of dementia.",
+      "gold_label": "SUPPORT",
+      "doc_id": "13282296",
+      "assessment": "agree"
+    },
+    {
+      "id": 540,
+      "error_type": "generalization_beyond_evidence",
+      "reasoning": "The evidence shows that glutamate release from ventromedial hypothalamic (VMH) neurons is important for preventing hypoglycemia and for counterregulatory responses during fasting or insulin-induced hypoglycemia. That supports a role in glucose homeostasis/energy balance, but the claim is broader and says hypothalamic glutamate neurotransmission is 'crucial to energy balance' in general. The paper does not directly establish that all hypothalamic glutamate neurotransmission is crucial to energy balance, nor does it address broader energy balance endpoints such as feeding, body weight, or energy expenditure. So the gold SUPPORT label is somewhat stronger than what the evidence strictly demonstrates. The correct label is ambiguous/debatable rather than clearly supported as stated.",
+      "correct_label": "ambiguous",
+      "claim": "Hypothalamic glutamate neurotransmission is crucial to energy balance.",
+      "gold_label": "SUPPORT",
+      "doc_id": "11886686",
+      "assessment": "debatable"
+    },
+    {
+      "id": 549,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that Irg1 was one of three interferon-stimulated genes that mediated antiviral effects against different neurotropic viruses. This supports the claim that IRG1 has antiviral effects against neurotropic viruses. The wording is broad but still consistent with the abstract, which explicitly links Irg1 to antiviral activity in this context. There is no numerical or directional mismatch.",
+      "correct_label": "support",
+      "claim": "IRG1 has antiviral effects against neurotropic viruses.",
+      "gold_label": "SUPPORT",
+      "doc_id": "9433958",
+      "assessment": "agree"
+    },
+    {
+      "id": 569,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that adult tissues contain a predominance of memory T cells, which matches the claim that in adult tissue, most T cells are memory T cells. The wording is broad but consistent with the abstract’s summary of adult tissue T-cell composition. There is no numerical mismatch or causal overreach here. A domain expert would likely accept the gold SUPPORT label.",
+      "correct_label": "support",
+      "claim": "In adult tissue, most T cells are memory T cells.",
+      "gold_label": "SUPPORT",
+      "doc_id": "23460562",
+      "assessment": "agree"
+    },
+    {
+      "id": 578,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that AML induction was suppressed in CSF1R-deficient mice and that CSF1R inhibitors slowed progression of MOZ-TIF2–induced leukemia. This supports the idea that loss of CSF1R impairs, rather than facilitates, MOZ-TIF2-driven leukemogenesis. The claim is therefore contradicted by the paper’s findings. The wording is sufficiently clear, and there is no ambiguity that would reverse the direction of the effect.",
+      "correct_label": "contradict",
+      "claim": "In mouse models, the loss of CSF1R facilitates MOZ-TIF2-induced leuekmogenesis.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "8764879",
+      "assessment": "agree"
+    },
+    {
+      "id": 589,
+      "error_type": "none",
+      "reasoning": "The evidence directly supports the claim’s main point: in young and middle-aged adults, current use compared with remote use was not associated with an increased risk of serious cardiovascular events (adjusted RR 1.03, 95% CI 0.86-1.24). The abstract’s conclusion also states that current or new use was not associated with increased risk compared with nonuse or remote use. Although the claim says \"current or remote uses\" rather than the paper’s phrasing \"current or new use\" versus remote use, the intended meaning is clear and consistent with the evidence. There is no contradiction or numerical mismatch that would invalidate the SUPPORT label.",
+      "correct_label": "support",
+      "claim": "In young and middle-aged adults, current or remote uses of ADHD medications do not increase the risk of serious cardiovascular events.",
+      "gold_label": "SUPPORT",
+      "doc_id": "10984005",
+      "assessment": "agree"
+    },
+    {
+      "id": 593,
+      "error_type": "numerical_mismatch",
+      "reasoning": "The evidence explicitly states that the incidence of heart failure \"did not change over time among men or women.\" That directly contradicts the claim that incidence decreased by 10% in women since 1979. The paper reports a sex difference in incidence levels, but not a 10% decline in women. A domain expert would therefore not accept the gold SUPPORT label.",
+      "correct_label": "contradict",
+      "claim": "Incidence of heart failure decreased by 10% in women since 1979.",
+      "gold_label": "SUPPORT",
+      "doc_id": "19675911",
+      "assessment": "disagree"
+    },
+    {
+      "id": 597,
+      "error_type": "other",
+      "reasoning": "The evidence clearly shows a decrease in cervical cancer mortality, not incidence. The claim specifically says 'incidence rates,' which refers to new cases, while the paper discusses deaths/mortality rates. Although mortality declines can sometimes correlate with incidence trends, that inference is not directly supported here. A domain expert would likely consider the gold SUPPORT label too strong for this wording.",
+      "correct_label": "ambiguous",
+      "claim": "Incidence rates of cervical cancer have decreased.",
+      "gold_label": "SUPPORT",
+      "doc_id": "12779444",
+      "assessment": "debatable"
+    },
+    {
+      "id": 597,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that cervical cancer incidence rates have declined, specifically noting that incidence and mortality rates have declined more in Finland. The claim is broad but matches the paper’s conclusion about a downward trend in incidence. There is no numerical mismatch or causal overclaim in the claim as written. A domain expert would likely accept SUPPORT based on this abstract.",
+      "correct_label": "support",
+      "claim": "Incidence rates of cervical cancer have decreased.",
+      "gold_label": "SUPPORT",
+      "doc_id": "25742130",
+      "assessment": "agree"
+    },
+    {
+      "id": 597,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that the mean incidence of cervical carcinoma fell from 15.4 per 100,000 woman-years in the early 1960s to 2.7 per 100,000 woman-years in 1991. That is a clear decrease in incidence rates of cervical cancer. Although the abstract notes that the decrease was mainly in squamous cell carcinomas and that adenocarcinoma incidence remained the same, the broad claim as written is still supported by the overall cervical carcinoma incidence trend. There is no numerical or directional mismatch here.",
+      "correct_label": "support",
+      "claim": "Incidence rates of cervical cancer have decreased.",
+      "gold_label": "SUPPORT",
+      "doc_id": "36355784",
+      "assessment": "agree"
+    },
+    {
+      "id": 598,
+      "error_type": "direction_reversed",
+      "reasoning": "The claim says incidence rates of cervical cancer have increased due to nationwide cytology-based screening programs, but the evidence states the opposite direction: incidence and mortality rates have declined, especially in Finland. The abstract also suggests the screening programme is associated with the mortality decline, not an increase in incidence. While it notes that greater excess smear use in Finland might have affected incidence, this does not support a general claim that incidence increased because of screening. Therefore the gold label CONTRADICT is not correct for the claim as written; the evidence supports contradiction only with the 'increased' part, but the causal wording is also not supported.",
+      "correct_label": "support",
+      "claim": "Incidence rates of cervical cancer have increased due to nationwide screening programs based primarily on cytology to detect uterine cervical cancer.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "25742130",
+      "assessment": "disagree"
+    },
+    {
+      "id": 613,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that pathogenic LRRK2 Roc-COR domain mutations cause locomotor deficits in vivo and that increasing microtubule acetylation rescues both axonal transport and locomotor behavior. The claim paraphrases this accurately as increased microtubule acetylation repairing mutation-induced locomotor deficits. Although the word \"repairs\" is slightly informal, it is consistent with the reported rescue effect. A domain expert would accept the gold SUPPORT label.",
+      "correct_label": "support",
+      "claim": "Increased microtubule acetylation repairs LRRK2 Roc-COR domain mutation induced locomotor deficits.",
+      "gold_label": "SUPPORT",
+      "doc_id": "9638032",
+      "assessment": "agree"
+    },
+    {
+      "id": 619,
+      "error_type": "direction_reversed",
+      "reasoning": "The evidence states the opposite of the claim: increasing intratumoral vascular density and depleting stromal tissue improved gemcitabine delivery and produced transient stabilization of disease. That indicates enhanced, not decreased, chemotherapy efficacy. The claim also adds a fibrosis reduction component, which is not directly stated in the evidence, but the main relationship is clearly reversed. A domain expert would therefore not accept the gold CONTRADICT label for this claim as written.",
+      "correct_label": "support",
+      "claim": "Increased vessel density along with a reduction in fibrosis decreases the efficacy of chemotherapy treatments.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "20888849",
+      "assessment": "disagree"
+    },
+    {
+      "id": 636,
+      "error_type": "other",
+      "reasoning": "The evidence supports that PTEN is a PI(3,4)P2 3-phosphatase, meaning it removes the 3-phosphate from PI(3,4)P2. That reaction would convert PI(3,4)P2 to PI(4)P, not to phosphatidylinositol 4-phosphate from a generic 'Ptdlns(3,4)P2' only if the notation is interpreted as PI(3,4)P2. However, the claim is phrased as 'Inositol lipid 3-phosphatase PTEN converts Ptdlns(3,4)P2 into phosphatidylinositol 4-phosphate,' which is chemically consistent with the evidence and the standard nomenclature. The gold label SUPPORT is therefore correct.",
+      "correct_label": "support",
+      "claim": "Inositol lipid 3-phosphatase PTEN converts Ptdlns(3,4)P 2 into phosphatidylinositol 4-phosphate.",
+      "gold_label": "SUPPORT",
+      "doc_id": "24294572",
+      "assessment": "disagree"
+    },
+    {
+      "id": 641,
+      "error_type": "none",
+      "reasoning": "The evidence directly supports the claim that cognitive behavioral therapy can effectively treat insomnia. In this randomized controlled trial, CBT improved multiple sleep outcomes and was superior to zopiclone in both short- and long-term management of insomnia in older adults. While the study is limited to chronic primary insomnia in older adults, the claim is broad but still consistent with the general conclusion that CBT is an effective treatment for insomnia. There is no contradiction or numerical mismatch in the evidence provided.",
+      "correct_label": "support",
+      "claim": "Insomnia can be effectively treated with cognitive behavioral therapy.",
+      "gold_label": "SUPPORT",
+      "doc_id": "5912283",
+      "assessment": "agree"
+    },
+    {
+      "id": 674,
+      "error_type": "none",
+      "reasoning": "The evidence explicitly states in the Background that \"LDL cholesterol has a causal role in the development of cardiovascular disease.\" This directly contradicts the claim that LDL cholesterol has no involvement in the development of cardiovascular disease. The claim is absolute, and the paper supports the opposite direction without ambiguity. A domain expert would therefore agree with the gold CONTRADICT label.",
+      "correct_label": "contradict",
+      "claim": "LDL cholesterol has no involvement in the development of cardiovascular disease.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "2095573",
+      "assessment": "agree"
+    },
+    {
+      "id": 692,
+      "error_type": "direction_reversed",
+      "reasoning": "The claim says that leuko-increased blood increases infectious complications in red blood cell transfusion. The evidence reports the opposite direction of intervention: universal leukoreduction was associated with no increase in serious nosocomial infections (adjusted OR 0.97, 95% CI 0.87-1.09), meaning infections did not rise and may have been unchanged. Since the claim asserts an increase in infectious complications, the paper does not support it and instead contradicts it. The gold label is therefore correct.",
+      "correct_label": "contradict",
+      "claim": "Leuko-increased blood increases infectious complications in red blood cell transfusion.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "24088502",
+      "assessment": "agree"
+    },
+    {
+      "id": 693,
+      "error_type": "direction_reversed",
+      "reasoning": "The evidence does not support the claim that leukoreduced blood reduces infectious complications in red blood cell transfusion. The abstract explicitly states that serious nosocomial infections did not decrease (adjusted OR 0.97; 95% CI 0.87-1.09), which is the most direct measure of infectious complications. Although fever episodes and antibiotic use decreased, those are secondary outcomes and not equivalent to reduced infectious complications. A domain expert would likely judge the claim too strong because the paper’s conclusion is more cautious and does not claim fewer infections.",
+      "correct_label": "contradict",
+      "claim": "Leuko-reduced blood reduces infectious complications in red blood cell transfusion.",
+      "gold_label": "SUPPORT",
+      "doc_id": "24088502",
+      "assessment": "disagree"
+    },
+    {
+      "id": 718,
+      "error_type": "direction_reversed",
+      "reasoning": "The evidence says that dense CG methylation directly disfavors nucleosomes and contributes to nucleosome positioning, meaning methylation is associated with nucleosome depletion rather than low nucleosome occupancy causing low methylation. The claim asserts a correlation between low nucleosome occupancy and low methylation levels across species, but the paper describes the opposite direction of effect and focuses on methylation influencing nucleosome placement. Also, the evidence is about clustered methylation in linker regions in diverse eukaryotes, not a broad across-species statement that low nucleosome occupancy correlates with low methylation. Therefore the gold label CONTRADICT is not supported by this evidence as stated; the claim is better treated as unsupported/ambiguous rather than directly contradicted.",
+      "correct_label": "ambiguous",
+      "claim": "Low nucleosome occupancy correlates with low methylation levels across species.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "17587795",
+      "assessment": "disagree"
+    },
+    {
+      "id": 721,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that infection of lupus-prone mice with curli-producing bacteria triggered higher autoantibody titers compared to curli-deficient bacteria. This matches the claim closely, including the comparison against controls. There is no apparent numerical or causal overreach beyond what the abstract reports. A domain expert would likely accept the gold SUPPORT label.",
+      "correct_label": "support",
+      "claim": "Lupus-prone mice infected with curliproducing bacteria have higher autoantibody titers compared to controls.",
+      "gold_label": "SUPPORT",
+      "doc_id": "1834762",
+      "assessment": "agree"
+    },
+    {
+      "id": 723,
+      "error_type": "none",
+      "reasoning": "The claim is well aligned with the paper’s abstract and key evidence. The paper states that Ly49Q is crucial for neutrophil polarization and tissue infiltration, and that Ly49Q-dependent polarization and migration were affected by Ly49Q regulation of membrane raft functions. The phrase \"directs the organization of neutrophil migration to inflammation sites\" is a reasonable paraphrase of Ly49Q being pivotal in switching neutrophils to polarized morphology and rapid migration upon inflammation. There is no clear causal overreach beyond what the evidence supports.",
+      "correct_label": "support",
+      "claim": "Ly49Q directs the organization of neutrophil migration to inflammation sites by regulating membrane raft functions.",
+      "gold_label": "SUPPORT",
+      "doc_id": "5531479",
+      "assessment": "agree"
+    },
+    {
+      "id": 728,
+      "error_type": "other",
+      "reasoning": "The evidence does not support the claim that Ly6C hi monocytes have a lower inflammatory capacity than Ly6C lo monocytes. The abstract says the subsets differ in maturation stage and capacity to become recruited to inflammatory sites, and specifically notes that inflammatory conditions increase immature Ly-6C(high) monocytes and preferentially recruit Ly-6C(med-high) monocytes. This points to Ly6C(high) cells being associated with inflammation, not having lower inflammatory capacity than Ly6C(low) cells. The claim also uses the vague phrase 'inflammatory capacity,' which is not directly measured here, but the direction of the evidence still contradicts the gold label.",
+      "correct_label": "support",
+      "claim": "Ly6C hi monocytes have a lower inflammatory capacity than Ly6C lo monocytes.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "36444198",
+      "assessment": "disagree"
+    },
+    {
+      "id": 729,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that the SHP2 signal-deficient knockin mice (gp130F759/F759) displayed lymphadenopathy. This matches the claim that lymphadenopathy is observed in a knockin mouse lacking the SHP-2 MAPK pathway. Although the claim uses slightly informal wording (“lacking the SHP-2 MAPK pathway”), the paper clearly identifies the relevant mice as SHP2 signal-deficient. A domain expert would accept the gold label SUPPORT.",
+      "correct_label": "support",
+      "claim": "Lymphadenopathy is observed in knockin mouse lacking the SHP-2 MAPK pathway.",
+      "gold_label": "SUPPORT",
+      "doc_id": "26851674",
+      "assessment": "agree"
+    },
+    {
+      "id": 742,
+      "error_type": "none",
+      "reasoning": "The claim says macrolides have no protective effect against myocardial infarction. The cited study reports that no effect was found for previous use of macrolides, which is consistent with the absence of a protective association. The evidence does not show a benefit for macrolides, and the wording does not overstate beyond what the abstract supports. A domain expert would likely accept the gold label as correct.",
+      "correct_label": "support",
+      "claim": "Macrolides have no protective effect against myocardial infarction.",
+      "gold_label": "SUPPORT",
+      "doc_id": "32159283",
+      "assessment": "agree"
+    },
+    {
+      "id": 743,
+      "error_type": "negation_missed",
+      "reasoning": "The claim says macrolides protect against myocardial infarction. The evidence explicitly states that no effect was found for previous use of macrolides (primarily erythromycin), which does not support a protective association. While the study found lower MI risk for tetracyclines and quinolones, it did not find this for macrolides. Therefore the gold CONTRADICT label is correct.",
+      "correct_label": "contradict",
+      "claim": "Macrolides protect against myocardial infarction.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "32159283",
+      "assessment": "agree"
+    },
+    {
+      "id": 744,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that protein macropinocytosis can serve as an essential amino acid source, which supports the claim that macropinocytosis contributes to a cell's supply of amino acids via intracellular uptake of protein. The claim is a close paraphrase of the paper's conclusion and does not add a stronger causal mechanism than the evidence provides. There is no numerical or directional mismatch, and the wording is sufficiently precise for the supported inference.",
+      "correct_label": "support",
+      "claim": "Macropinocytosis contributes to a cell's supply of amino acids via the intracellular uptake of protein.",
+      "gold_label": "SUPPORT",
+      "doc_id": "8460275",
+      "assessment": "agree"
+    },
+    {
+      "id": 756,
+      "error_type": "none",
+      "reasoning": "The evidence states that lysine acetylation is a reversible post-translational modification involving transfer of an acetyl group to the lysine residue of targeted proteins. This directly supports the claim that proteins in human cells can be modified at lysine residues via acetylation. Although the abstract does not explicitly say 'many' or 'human cells' in the key sentence, the paper is about protein lysine acetylation broadly and notes accumulating proteomic studies, making the claim consistent with the evidence. A domain expert would likely accept the gold SUPPORT label.",
+      "correct_label": "support",
+      "claim": "Many proteins in human cells can be post-translationally modified at lysine residues via acetylation.",
+      "gold_label": "SUPPORT",
+      "doc_id": "2831620",
+      "assessment": "agree"
+    },
+    {
+      "id": 759,
+      "error_type": "direction_reversed",
+      "reasoning": "The claim says mathematical models predict that ACT over nongametocytocidal drugs have a dramatic impact in reducing malaria transmission. The evidence does show that ACT can reduce transmission, but it also explicitly states that in the highest-transmission setting, a non-gametocytocidal regimen with a long prophylactic time was estimated to be more effective at reducing transmission than a short-acting ACT. That directly contradicts the implication that ACT is the superior option over nongametocytocidal drugs. The wording is also too broad because the paper’s conclusion is conditional on transmission setting, not a general claim of dramatic superiority.",
+      "correct_label": "contradict",
+      "claim": "Mathematical models predict that using Artemisinin-based combination therapy over nongametocytocidal drugs have a dramatic impact in reducing malaria transmission.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "1805641",
+      "assessment": "disagree"
+    },
+    {
+      "id": 770,
+      "error_type": "none",
+      "reasoning": "The evidence directly supports the core comparison in the claim: in frail/elderly patients with metastatic colorectal cancer, the trial concludes that a combination including oxaliplatin was preferable to single-agent fluoropyrimidines. The claim’s wording about “reduced efficacy” is consistent with the reported preference for oxaliplatin-based therapy and the suggestion of improved progression-free survival, though the primary endpoint was not statistically significant. The quality-of-life part is a bit less exact because the abstract specifically says capecitabine did not improve global QoL compared with fluorouracil, rather than explicitly stating lower QoL for all single-agent fluoropyrimidines. However, overall the gold SUPPORT label is defensible given the interpretation statement and the trial context.",
+      "correct_label": "support",
+      "claim": "Metastatic colorectal cancer treated with a single agent fluoropyrimidines resulted in reduced efficacy and lower quality of life when compared with oxaliplatin-based chemotherapy in elderly patients.",
+      "gold_label": "SUPPORT",
+      "doc_id": "15476777",
+      "assessment": "agree"
+    },
+    {
+      "id": 781,
+      "error_type": "negation_missed",
+      "reasoning": "The evidence directly contradicts the claim that mice lacking IFN-γ or its receptor exhibit high resistance to experimental autoimmune myocarditis. In the cited study, IFN-γ receptor-deficient mice developed severe myocarditis with high mortality and persistent disease, whereas wild-type mice recovered. The conclusion explicitly states that IFN-γ protects mice from lethal autoimmune myocarditis, which is the opposite of resistance in knockout mice. The gold label CONTRADICT is therefore correct.",
+      "correct_label": "contradict",
+      "claim": "Mice that lack Interferon-γ or its receptor exhibit high resistance to experimental autoimmune myocarditis.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "24338780",
+      "assessment": "agree"
+    },
+    {
+      "id": 784,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that a microRNA (miR-184) regulates adult neural stem/progenitor cell proliferation and differentiation, and that this forms a regulatory network controlling the balance between these processes. This supports the broader claim that microRNA is involved in regulation of NSC differentiation and proliferation homeostasis. Although the claim is somewhat general and the paper focuses on one specific microRNA, the wording does not overstate beyond the evidence in a way that would make the SUPPORT label incorrect. A domain expert would likely accept this as supported by the cited study.",
+      "correct_label": "support",
+      "claim": "MicroRNA is involved in the regulation of Neural Stem Cell (NSC) differentiation and proliferation dynamic homeostasis",
+      "gold_label": "SUPPORT",
+      "doc_id": "2356950",
+      "assessment": "agree"
+    },
+    {
+      "id": 793,
+      "error_type": "negation_missed",
+      "reasoning": "The claim states that mitochondria are uninvolved in apoptosis, which is directly negated by the evidence. The abstract explicitly says mitochondria 'participate in ... apoptosis,' so the paper supports the opposite of the claim. This is a straightforward contradiction with no apparent ambiguity in wording or scope. A domain expert would agree that the gold label CONTRADICT is correct.",
+      "correct_label": "contradict",
+      "claim": "Mitochondria are uninvolved in apoptosis.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "8551160",
+      "assessment": "agree"
+    },
+    {
+      "id": 805,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that monoclonal antibodies against N-cadherin blocked local invasion and metastasis in vivo. The claim is a concise paraphrase of this finding and does not overstate the result beyond what the abstract reports. Although the paper also mentions effects on growth and castration resistance, the metastasis component is clearly supported. A domain expert would accept the gold label as correct.",
+      "correct_label": "support",
+      "claim": "Monoclonal antibody targeting of N-cadherin inhibits metastasis.",
+      "gold_label": "SUPPORT",
+      "doc_id": "22180793",
+      "assessment": "agree"
+    },
+    {
+      "id": 808,
+      "error_type": "direction_reversed",
+      "reasoning": "The evidence explicitly says that replication termination is a largely passive phenomenon that does not rely on cis-acting sequences or replication fork pausing. That is the opposite of saying most termination events in Okazaki fragments are sequence specific. The claim makes a strong sequence-specificity assertion, but the paper argues termination is generally not sequence dependent. A domain expert would therefore not accept the gold SUPPORT label.",
+      "correct_label": "contradict",
+      "claim": "Most termination events in Okazaki fragments are sequence specific.",
+      "gold_label": "SUPPORT",
+      "doc_id": "36606083",
+      "assessment": "disagree"
+    },
+    {
+      "id": 811,
+      "error_type": "direction_reversed",
+      "reasoning": "The evidence states that ascorbic-acid levels were undetectable or markedly reduced in the blood and tissues of Slc23a1−/− mice, which directly contradicts the claim that mutant mice lacking SVCT2 have greatly increased ascorbic acid levels in both brain and adrenals. The claim reverses the direction of the effect: the knockout decreases vitamin C levels rather than increasing them. Although the paper uses Slc23a1/Svct2 nomenclature, the biological conclusion is unambiguous. A domain expert would therefore accept the CONTRADICT label.",
+      "correct_label": "contradict",
+      "claim": "Mutant mice lacking SVCT2 have greatly increased ascorbic acid levels in both brain and adrenals.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "19799455",
+      "assessment": "agree"
+    },
+    {
+      "id": 823,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that N348I decreased zidovudine susceptibility 2- to 4-fold in wildtype HIV-1 or with TAMs, and the paper title/conclusion explicitly says N348I confers zidovudine resistance. That is sufficient support for the claim that N348I mutations cause resistance to zidovudine (AZT). The wording is slightly broad because it refers to the mutation in general rather than a specific experimental context, but the paper supports that general conclusion. A domain expert would likely accept the gold label as correct.",
+      "correct_label": "support",
+      "claim": "N348I mutations cause resistance to zidovudine (AZT).",
+      "gold_label": "SUPPORT",
+      "doc_id": "15319019",
+      "assessment": "agree"
+    },
+    {
+      "id": 832,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that NFAT4 requires Ca2+ mobilization from the inner nuclear envelope by nuclear InsP3 receptors for sustained activation. Since IP3R-mediated Ca2+ mobilization is essentially the same mechanism described here, the claim is supported by the abstract. There is no obvious overstatement or numerical issue. A domain expert would likely accept the gold label as correct.",
+      "correct_label": "support",
+      "claim": "NFAT4 activation requires IP3R-mediated Ca2+ mobilization.",
+      "gold_label": "SUPPORT",
+      "doc_id": "30303335",
+      "assessment": "agree"
+    },
+    {
+      "id": 837,
+      "error_type": "none",
+      "reasoning": "The evidence states that NR5A2/Lrh-1 is expressed in mouse and human endometrium and that reducing NR5A2 in human endometrial stromal cells abrogated decidualization. Decidualization is a key developmental/functional process of endometrial tissue during pregnancy, so this supports the claim that NR5A2 is important in endometrial tissue development. The claim is somewhat broad, but it is still reasonably supported by the cited findings. There is no clear contradiction or numerical issue.",
+      "correct_label": "support",
+      "claim": "NR5A2 is important in development of endometrial tissues.",
+      "gold_label": "SUPPORT",
+      "doc_id": "15928989",
+      "assessment": "agree"
+    },
+    {
+      "id": 839,
+      "error_type": "none",
+      "reasoning": "The evidence directly supports the claim: the paper describes aptamer-functionalized lipid nanoparticles (LNPs) using the CH6 aptamer to achieve osteoblast-selective uptake and osteoblast-specific gene silencing. This is a clear example of targeting nanoparticles to a specific cell type by incorporating aptamers into lipid nanoparticles. The claim is phrased generally, but the study provides a concrete instance consistent with it. There is no numerical or directional mismatch, and no overclaim beyond what the abstract states.",
+      "correct_label": "support",
+      "claim": "Nanoparticles can be targeted against specific cell types by incorporating aptamers into lipid nanoparticles.",
+      "gold_label": "SUPPORT",
+      "doc_id": "1469751",
+      "assessment": "agree"
+    },
+    {
+      "id": 845,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that neutrophil extracellular traps (NETs) are released by ANCA-stimulated neutrophils. This is a close paraphrase of the key sentence in the abstract, with no numerical, directional, or causal mismatch. The claim is precise and fully supported by the cited text.",
+      "correct_label": "support",
+      "claim": "Neutrophil extracellular traps (NETs) are released by ANCA-stimulated neutrophils.",
+      "gold_label": "SUPPORT",
+      "doc_id": "17741440",
+      "assessment": "agree"
+    },
+    {
+      "id": 847,
+      "error_type": "generalization_beyond_evidence",
+      "reasoning": "The evidence does not support the broad claim that new drugs for tuberculosis often fail to reach high concentrations in the necrotic portion of lesions. In fact, the abstract explicitly states that rifampicin and pyrazinamide efficiently penetrate TB lung lesions, and rifampicin even accumulates in necrotic caseum. The only negative example given is moxifloxacin, which does not diffuse well in caseum, so the paper shows heterogeneity among drugs rather than a general pattern that new TB drugs often do not penetrate necrotic lesions. The gold label CONTRADICT is therefore incorrect because the cited evidence includes direct counterevidence to the claim’s generalization. The correct label is SUPPORT, or at minimum the claim would be considered too broad if judged strictly from this single paper, but it is not contradicted by it.",
+      "correct_label": "support",
+      "claim": "New drugs for tuberculosis often do not penetrate the necrotic portion of a tuberculosis lesion in high concentrations.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "16787954",
+      "assessment": "disagree"
+    },
+    {
+      "id": 852,
+      "error_type": "direction_reversed",
+      "reasoning": "The evidence says non-invasive ventilation (NIV) reduced mortality and costs and was a highly cost-effective treatment, which supports using NIV rather than decreasing it. The claim states NIV use should be decreased if there is inadequate response to conventional treatment, but the paper does not recommend decreasing NIV in that situation; if anything, it supports NIV as an added therapy for patients not adequately managed by standard treatment. The gold label CONTRADICT is therefore reversed relative to the evidence. A domain expert would likely judge the claim unsupported or opposite to the paper's conclusion.",
+      "correct_label": "support",
+      "claim": "Non-invasive ventilation use should be decreased if there is inadequate response to conventional treatment.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "13843341",
+      "assessment": "disagree"
+    },
+    {
+      "id": 859,
+      "error_type": "direction_reversed",
+      "reasoning": "The evidence explicitly states that RUNX1 is predicted to have a tumor-suppressor role in T cell transformation and identifies it as a tumor-suppressor gene in T-ALL. That is the opposite of the claim that normal expression of RUNX1 has tumor-promoting effects. The claim is therefore contradicted by the paper’s conclusion, and the gold label is correct. There is no numerical or wording ambiguity that would change this interpretation.",
+      "correct_label": "contradict",
+      "claim": "Normal expression of RUNX1 has tumor-promoting effects.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "1982286",
+      "assessment": "agree"
+    },
+    {
+      "id": 873,
+      "error_type": "generalization_beyond_evidence",
+      "reasoning": "The claim says obesity is determined solely by environmental factors, which is an absolute statement. The evidence directly reports that body mass index in siblings and adoptees is associated with biological relatedness and explicitly concludes that fatness in adults living in the same environment appears to be influenced by genetic factors. That contradicts the idea that environment alone determines obesity. The wording is broad, but the contradiction is clear because the paper provides evidence for genetic influence beyond environment.",
+      "correct_label": "contradict",
+      "claim": "Obesity is determined solely by environmental factors.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "1180972",
+      "assessment": "agree"
+    },
+    {
+      "id": 873,
+      "error_type": "none",
+      "reasoning": "The claim says obesity is determined solely by environmental factors, which is a very strong exclusivity claim. The evidence reports suspected familial obesity and strong within-family clustering, indicating a familial component rather than purely environmental determination. It also notes that nearly all subjects had no overt metabolic or pharmacological explanations, but that does not imply environment is the sole cause. A domain expert would therefore agree that the evidence contradicts the claim as stated.",
+      "correct_label": "contradict",
+      "claim": "Obesity is determined solely by environmental factors.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "19307912",
+      "assessment": "agree"
+    },
+    {
+      "id": 873,
+      "error_type": "none",
+      "reasoning": "The claim says obesity is determined solely by environmental factors, which is a strong exclusivity claim. The evidence directly states that genetic influences on body-mass index are substantial and that childhood environment has little or no influence, so the claim is contradicted. Although the paper discusses BMI rather than obesity per se, BMI is the relevant phenotype used here and the genetic contribution clearly rules out an environmental-only explanation. A domain expert would agree that the gold label should be CONTRADICT.",
+      "correct_label": "contradict",
+      "claim": "Obesity is determined solely by environmental factors.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "27393799",
+      "assessment": "agree"
+    },
+    {
+      "id": 873,
+      "error_type": "none",
+      "reasoning": "The evidence directly contradicts the claim that obesity is determined solely by environmental factors. The study reports a strong association between adoptees' weight class and their biologic parents' BMI, but no relation with adoptive parents' BMI, indicating a genetic contribution. The authors explicitly conclude that genetic influences have an important role in determining human fatness and that family environment alone has no apparent effect. Because the claim asserts exclusivity of environmental determination, the presence of genetic influence makes the gold label CONTRADICT correct.",
+      "correct_label": "contradict",
+      "claim": "Obesity is determined solely by environmental factors.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "29025270",
+      "assessment": "agree"
+    },
+    {
+      "id": 873,
+      "error_type": "none",
+      "reasoning": "The claim says obesity is determined solely by environmental factors, which excludes any genetic contribution. The evidence explicitly states that genetic factors are certainly present and suggests a dominant major gene with weak effect. That directly contradicts the claim’s exclusivity, so the gold label CONTRADICT is correct. The wording is strong but clear enough for a contradiction judgment.",
+      "correct_label": "contradict",
+      "claim": "Obesity is determined solely by environmental factors.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "3315558",
+      "assessment": "agree"
+    },
+    {
+      "id": 879,
+      "error_type": "negation_missed",
+      "reasoning": "The claim says that ribosome occupancy of lncRNAs does not make functional peptides. The evidence explicitly states that ribosome occupancy alone is not sufficient to classify transcripts as coding or noncoding, and that the large majority of lincRNAs do not function through encoded proteins. This supports the idea that ribosome occupancy does not imply functional peptide production, rather than contradicting it. The gold label appears to have missed the negation in the claim.",
+      "correct_label": "support",
+      "claim": "Occupancy of ribosomes by IncRNAs do not make functional peptides.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "8426046",
+      "assessment": "disagree"
+    },
+    {
+      "id": 880,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that 5' UTRs show the same ribosome occupancy as lincRNAs, which supports the claim that ribosome occupancy of lncRNAs mirrors 5' UTRs. The wording is slightly awkward ('IncRNAs' likely means lncRNAs, and 'mirror' is informal), but the intended meaning is clear and matches the paper's conclusion. There is no numerical or directional mismatch here. A domain expert would likely accept the gold SUPPORT label.",
+      "correct_label": "support",
+      "claim": "Occupancy of ribosomes by IncRNAs mirror 5 0-UTRs",
+      "gold_label": "SUPPORT",
+      "doc_id": "8426046",
+      "assessment": "agree"
+    },
+    {
+      "id": 882,
+      "error_type": "direction_reversed",
+      "reasoning": "The evidence states the opposite of the claim: omnivorous human subjects produced more TMAO than vegans or vegetarians after ingestion of L-carnitine. The claim says omnivores produce less TMAO than vegetarians, which is directly contradicted by the quoted result. The wording 'I-carnitine' appears to be a typo for L-carnitine, but that does not change the direction of the finding.",
+      "correct_label": "contradict",
+      "claim": "Omnivores produce less trimethylamine N-oxide from dietary I-carnitine than vegetarians.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "14803797",
+      "assessment": "disagree"
+    },
+    {
+      "id": 903,
+      "error_type": "direction_reversed",
+      "reasoning": "The evidence states the opposite of the claim: PD-1 triggering on monocytes induced IL-10 production by monocytes, rather than reducing it. The title and abstract both explicitly describe PD-1-induced interleukin-10 production by monocytes. There is no indication of a decrease in IL-10 associated with PD-1 engagement in this paper. Therefore the gold label CONTRADICT is correct, but the claim-label pairing is reversed relative to the evidence.",
+      "correct_label": "contradict",
+      "claim": "PD-1 triggering on monocytes reduces IL-10 production by monocytes.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "10648422",
+      "assessment": "disagree"
+    },
+    {
+      "id": 904,
+      "error_type": "none",
+      "reasoning": "The claim closely matches the paper’s stated conclusion. The abstract explicitly says that activation of CLEC-2 by PDPN rearranges the actin cytoskeleton in dendritic cells and promotes efficient motility along stromal surfaces. The wording “C-type lectin receptor” is consistent with CLEC-2, which is a C-type lectin receptor. There is no numerical or directional mismatch, and the claim does not overstate beyond the evidence provided.",
+      "correct_label": "support",
+      "claim": "PDPN promotes efficient motility along stromal surfaces by activating the C-type lectin receptor to rearrange the actin cytoskeleton in dendritic cells.",
+      "gold_label": "SUPPORT",
+      "doc_id": "7370282",
+      "assessment": "agree"
+    },
+    {
+      "id": 911,
+      "error_type": "none",
+      "reasoning": "The evidence states that presynaptic PKG-I in nociceptor terminals plays an essential role in the expression of spinal LTP and in regulating pain sensitivity, and that knockout mice lacking PKG-I show marked defects in activity-induced nociceptive hypersensitivity. This directly supports the claim that PKG-la is essential for expression of pain hypersensitivity in knockout mice. The only minor issue is the claim’s wording (“PGK-la” vs. PKG-I), but this appears to be a typographical variant rather than a substantive mismatch. A domain expert would likely accept the gold SUPPORT label.",
+      "correct_label": "support",
+      "claim": "PKG-la plays an essential role in expression of pain hypersensitivity in PGK-la knockout mice.",
+      "gold_label": "SUPPORT",
+      "doc_id": "11254556",
+      "assessment": "agree"
+    },
+    {
+      "id": 921,
+      "error_type": "none",
+      "reasoning": "The evidence directly supports the claim: the randomized trial tested a 24-week (about 6-month) physical activity intervention and found a modest improvement in cognition compared with usual care. The conclusion explicitly states that a 6-month program of physical activity provided a modest improvement in cognition over follow-up. The claim is slightly broad because it says 'improves cognitive functioning' without qualifying the effect as modest or limited to older adults at risk for Alzheimer disease, but this does not reverse the direction of the finding. A domain expert would likely accept SUPPORT given the trial results.",
+      "correct_label": "support",
+      "claim": "Participating in six months of physical activity improves cognitive functioning.",
+      "gold_label": "SUPPORT",
+      "doc_id": "1642727",
+      "assessment": "agree"
+    },
+    {
+      "id": 922,
+      "error_type": "direction_reversed",
+      "reasoning": "The evidence directly contradicts the claim. The study reports an adjusted hazard ratio of 0.79 for progression to AIDS or death among participants with a stable partnership compared with those without, which indicates a lower, not faster, rate of progression. The authors’ conclusion explicitly states that stable partnership is associated with a slower rate of progression to AIDS or death. The claim reverses the direction of the association.",
+      "correct_label": "contradict",
+      "claim": "Patients in stable partnerships have a faster progression from HIV to AIDS.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "17077004",
+      "assessment": "agree"
+    },
+    {
+      "id": 936,
+      "error_type": "none",
+      "reasoning": "The evidence states that nitration of the TCR-CD8 complex is induced by MDSCs through hyperproduction of reactive oxygen species and peroxynitrite during direct cell-cell contact. This directly supports the claim that peroxynitrite is required for nitration of TCR/CD8, since peroxynitrite is presented as the inducing mechanism for the nitration event. The wording is slightly stronger than the abstract’s exact phrasing, but not enough to make the label incorrect. A domain expert would likely accept SUPPORT here.",
+      "correct_label": "support",
+      "claim": "Peroxynitrite is required for nitration of TCR/CD8.",
+      "gold_label": "SUPPORT",
+      "doc_id": "5483793",
+      "assessment": "agree"
+    },
+    {
+      "id": 957,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that podocytes were visualized as motile in vivo and that, after unilateral ureteral ligation (an injury model), they migrated into the parietal Bowman's capsule. This supports the claim that podocytes are motile and migrate in the presence of injury. The wording is appropriately cautious because it does not claim all podocytes always migrate, only that migration occurs under injury conditions. A domain expert would likely accept SUPPORT here.",
+      "correct_label": "support",
+      "claim": "Podocytes are motile and migrate in the presence of injury.",
+      "gold_label": "SUPPORT",
+      "doc_id": "123859",
+      "assessment": "agree"
+    },
+    {
+      "id": 960,
+      "error_type": "other",
+      "reasoning": "The evidence supports that the Polymeal is modeled to reduce cardiovascular disease events and cardiovascular morbidity, and it even predicts fewer years lived with cardiovascular disease. However, the claim says it reduces cardiovascular mortality specifically, which is not directly stated in the abstract. The paper discusses cardiovascular events/morbidity and life expectancy, but not a direct mortality endpoint or a clear estimate of reduced cardiovascular death. So the gold SUPPORT label is somewhat overconfident; the safest assessment is that the evidence only indirectly suggests a mortality benefit, making the claim debatable rather than clearly supported.",
+      "correct_label": "ambiguous",
+      "claim": "Polymeal nutrition reduces cardiovascular mortality.",
+      "gold_label": "SUPPORT",
+      "doc_id": "8780599",
+      "assessment": "debatable"
+    },
+    {
+      "id": 967,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that Arp2/3 complex inhibition via CK666 dramatically altered lamellipodial (LP) actin architecture and caused a lamellipodial-to-filopodial shape change. This clearly supports the claim that pretreatment with CK-666 affects lamellipodia formation. The wording is slightly broad, but not enough to make the label debatable because the paper explicitly links CK666 treatment to changes in lamellipodial structure and behavior.",
+      "correct_label": "support",
+      "claim": "Pretreatment with the Arp2/3 inhibitor CK-666 affects lamelliopodia formation.",
+      "gold_label": "SUPPORT",
+      "doc_id": "8997410",
+      "assessment": "agree"
+    },
+    {
+      "id": 971,
+      "error_type": "none",
+      "reasoning": "The evidence directly supports the claim that HPV-based primary screening has higher longitudinal sensitivity than conventional cytology for detecting CIN2. The abstract explicitly states HPV testing is more sensitive than cytology for CIN, and in women aged 35-60 the relative detection for CIN2 at round one was 2.00, indicating higher detection with HPV. The interpretation also says HPV-based screening detects persistent high-grade lesions earlier and provides a longer low-risk period, which is consistent with greater longitudinal sensitivity. The claim is slightly simplified, but not misleading enough to challenge the gold label.",
+      "correct_label": "support",
+      "claim": "Primary cervical cancer screening with HPV detection has higher longitudinal sensitivity than conventional cytology to detect cervical intraepithelial neoplasia grade 2.",
+      "gold_label": "SUPPORT",
+      "doc_id": "27873158",
+      "assessment": "agree"
+    },
+    {
+      "id": 971,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that primary screening for hrHPV generally detects more CIN2, CIN3, or cancer compared to cytology, which supports the claim that HPV detection has higher sensitivity than conventional cytology for detecting CIN2. The claim’s wording about “longitudinal sensitivity” is consistent with the cited randomized trials and follow-up studies summarized in the abstract, which report lower cumulative incidence among HPV-negative women over time. Although the evidence does not use the exact phrase “longitudinal sensitivity,” the substantive meaning is clearly supported. There is no numerical mismatch or reversal of direction here.",
+      "correct_label": "support",
+      "claim": "Primary cervical cancer screening with HPV detection has higher longitudinal sensitivity than conventional cytology to detect cervical intraepithelial neoplasia grade 2.",
+      "gold_label": "SUPPORT",
+      "doc_id": "28617573",
+      "assessment": "agree"
+    },
+    {
+      "id": 971,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that HPV-based screening increases the sensitivity of detection of high-grade cervical intraepithelial neoplasia, which includes grade 2 lesions. The claim’s phrase \"longitudinal sensitivity\" is consistent with the paper’s finding that subsequent screening examinations detected fewer grade 2 or 3 lesions in the HPV arm, implying better earlier detection over follow-up. Although the abstract reports grade 2 or 3 together rather than grade 2 alone, the claim is not contradicted and is reasonably supported by the cited text. A domain expert would likely accept this as a fair summary of the paper’s conclusion.",
+      "correct_label": "support",
+      "claim": "Primary cervical cancer screening with HPV detection has higher longitudinal sensitivity than conventional cytology to detect cervical intraepithelial neoplasia grade 2.",
+      "gold_label": "SUPPORT",
+      "doc_id": "46695481",
+      "assessment": "agree"
+    },
+    {
+      "id": 971,
+      "error_type": "none",
+      "reasoning": "The evidence shows that HPV DNA testing in the intervention group detected significantly more CIN grade 2 or worse than cytology alone in the control group at the baseline round, which is consistent with higher sensitivity for detecting CIN2+. The claim is phrased as 'primary cervical cancer screening with HPV detection' versus 'conventional cytology,' and the trial directly compares HPV-based screening to cytology-only screening in a primary screening setting. Although the paper emphasizes cumulative and longitudinal outcomes across rounds, the reported findings support the general conclusion that HPV detection has higher longitudinal sensitivity than cytology for CIN grade 2. The wording is sufficiently aligned with the evidence, and a domain expert would likely accept this label.",
+      "correct_label": "support",
+      "claim": "Primary cervical cancer screening with HPV detection has higher longitudinal sensitivity than conventional cytology to detect cervical intraepithelial neoplasia grade 2.",
+      "gold_label": "SUPPORT",
+      "doc_id": "9764256",
+      "assessment": "agree"
+    },
+    {
+      "id": 982,
+      "error_type": "generalization_beyond_evidence",
+      "reasoning": "The evidence supports that growth cones have high ubiquitination and that locally translated proteins are major targets of the ubiquitin-proteasome system in growth cones. However, the claim is more specific and comparative: it says proteins synthesized at the growth cone are ubiquitinated at a higher rate than proteins from the cell body. The abstract does not directly compare ubiquitination rates between growth-cone-synthesized proteins and soma-derived proteins, nor does it quantify a higher rate. A domain expert might infer a local-degradation bias, but the exact comparative wording goes beyond what is explicitly shown, so the gold SUPPORT label is debatable.",
+      "correct_label": "support",
+      "claim": "Proteins synthesized at the growth cone are ubiquitinated at a higher rate than proteins from the cell body.",
+      "gold_label": "SUPPORT",
+      "doc_id": "2988714",
+      "assessment": "debatable"
+    },
+    {
+      "id": 985,
+      "error_type": "none",
+      "reasoning": "The evidence directly supports the claim that PTENP1 regulates PTEN expression. The abstract explicitly states that PTENP1 can regulate cellular levels of PTEN, and frames this as a microRNA-binding competition mechanism, i.e., an miRNA decoy function. While the abstract does not use the exact phrase \"miRNA decoy\" in the key sentence, it clearly describes competition for microRNA binding as the mechanism. A domain expert would therefore agree with the SUPPORT label.",
+      "correct_label": "support",
+      "claim": "Pseudogene PTENP1 regulates the expression of PTEN by functioning as an miRNA decoy.",
+      "gold_label": "SUPPORT",
+      "doc_id": "6828370",
+      "assessment": "agree"
+    },
+    {
+      "id": 993,
+      "error_type": "none",
+      "reasoning": "The evidence explicitly describes pyridostatin (PDS) as a G4-stabilizing compound and states that it increases telomere fragility, which is consistent with stabilization rather than destabilization of G-quadruplexes in the telomeric region. The claim says PDS destabilizes the G-quadruplex, which is the opposite of what the paper reports. A domain expert would therefore agree with the CONTRADICT label. The wording is not ambiguous enough to change the conclusion.",
+      "correct_label": "contradict",
+      "claim": "Pyridostatin destabilizes the G - quadruplex in the telomeric region.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "16472469",
+      "assessment": "agree"
+    },
+    {
+      "id": 1012,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that radioactive iodine treatment led to a substantial reduction in thyroid volume in patients with non-toxic multinodular goitre. The reported median volume decrease from 73 ml to 29 ml at 24 months, along with the conclusion that there was a substantial reduction in thyroid volume, clearly supports the claim. The wording is appropriately aligned with the study population and outcome, with no obvious overreach or numerical mismatch.",
+      "correct_label": "support",
+      "claim": "Radioiodine treatment of non-toxic multinodular goitre reduces thyroid volume.",
+      "gold_label": "SUPPORT",
+      "doc_id": "9745001",
+      "assessment": "agree"
+    },
+    {
+      "id": 1019,
+      "error_type": "other",
+      "reasoning": "The evidence supports that specificity in two-component systems is tightly controlled and that introducing certain residues can allow rapid phosphotransfer to noncognate partners, which is relevant to fidelity. However, the claim is phrased as if rapid phosphotransfer rates themselves govern fidelity in general, while the abstract mainly shows that structural determinants govern specificity and that phosphotransfer can be altered. The paper does not directly establish a general causal rule that rate alone governs fidelity across two-component systems. So the gold SUPPORT label is somewhat debatable rather than clearly correct.",
+      "correct_label": "ambiguous",
+      "claim": "Rapid phosphotransfer rates govern fidelity in two component systems",
+      "gold_label": "SUPPORT",
+      "doc_id": "11603066",
+      "assessment": "debatable"
+    },
+    {
+      "id": 1020,
+      "error_type": "none",
+      "reasoning": "The evidence supports the core idea that granule cell neurons have higher basal expression of certain interferon-stimulated genes and that these genes mediate antiviral effects against neurotropic viruses, including West Nile virus in the paper’s broader context. The abstract also states that the epigenetic state and miRNA regulation correlate with an enhanced antiviral response in granule cell neurons, which is consistent with improved survival of infected neurons. The claim’s wording is a bit broader than the exact phrasing in the abstract because it says \"rapid up-regulation\" and \"increase survival,\" but this is a reasonable paraphrase of the described enhanced innate immune/antiviral program. A domain expert would likely accept the gold SUPPORT label.",
+      "correct_label": "support",
+      "claim": "Rapid up-regulation and higher basal expression of interferon-induced genes increase survival of granule cell neurons that are infected by West Nile virus.",
+      "gold_label": "SUPPORT",
+      "doc_id": "9433958",
+      "assessment": "agree"
+    },
+    {
+      "id": 1021,
+      "error_type": "causal_overclaim",
+      "reasoning": "The evidence supports that granule cell neurons have higher basal expression of certain interferon-stimulated genes and that these genes mediate antiviral effects, which would be expected to increase resistance rather than reduce survival. However, the claim specifically says that rapid up-regulation and higher basal expression of interferon-induced genes reduce survival of granule cell neurons infected by West Nile virus, which is a stronger causal statement than the abstract directly establishes. The paper discusses differential susceptibility/permissiveness and antiviral programs, but it does not explicitly show that rapid up-regulation itself reduces survival in infected granule cell neurons. Because the direction of the effect is plausible but the causal wording is not directly evidenced, the label is somewhat debatable rather than a clear contradiction.",
+      "correct_label": "ambiguous",
+      "claim": "Rapid up-regulation and higher basal expression of interferon-induced genes reduce survival of granule cell neurons that are infected by West Nile virus.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "9433958",
+      "assessment": "debatable"
+    },
+    {
+      "id": 1024,
+      "error_type": "none",
+      "reasoning": "The evidence explicitly states that the identified CTCF anchor regions are a frequent site of mutations in cancer cells. The claim that recurrent mutations occur frequently within CTCF anchor sites adjacent to oncogenes is consistent with this statement, since it does not require a stronger or more specific causal relationship than the paper provides. Although the claim adds the qualifier \"adjacent to oncogenes,\" the evidence is broad enough to support frequent mutation of CTCF anchor regions in cancer, which is the core assertion. A domain expert would likely accept the gold SUPPORT label based on this passage.",
+      "correct_label": "support",
+      "claim": "Recurrent mutations occur frequently within CTCF anchor sites adjacent to oncogenes.",
+      "gold_label": "SUPPORT",
+      "doc_id": "5373138",
+      "assessment": "agree"
+    },
+    {
+      "id": 1029,
+      "error_type": "direction_reversed",
+      "reasoning": "The evidence says that an autoimmune disease-associated IL2RA haplotype is linked to diminished IL-2 responsiveness in Tregs and reduced suppressive function, and that these changes contribute to susceptibility to autoimmune and inflammatory diseases. This is the opposite direction of the claim, which states that reduced IL-2 responsiveness in Tregs is associated with greater resistance to autoimmune diseases. The paper supports increased risk/susceptibility, not resistance. A domain expert would therefore reject the gold label as CONTRADICT only if the claim were framed as resistance; here the evidence actually contradicts the claim as written, so the label itself is correct, but the claim’s direction is reversed relative to the evidence.",
+      "correct_label": "contradict",
+      "claim": "Reduced responsiveness to interleukin-2 in regulatory T cells is associated with greater resistance to autoimmune diseases such as Type 1 Diabetes.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "11899391",
+      "assessment": "disagree"
+    },
+    {
+      "id": 1029,
+      "error_type": "direction_reversed",
+      "reasoning": "The evidence says that reduced IL-2 production is associated with reduced regulatory T cell function and with autoimmune dysregulation/susceptibility, not resistance. The title and abstract explicitly state that IL-2 gene variation impairs Treg function and causes autoimmunity, which is the opposite of the claim’s implication that reduced responsiveness to IL-2 would be linked to greater resistance to autoimmune diseases. A domain expert would interpret this as supporting increased autoimmune risk, not protection. Therefore the gold label CONTRADICT is incorrect for the claim as written.",
+      "correct_label": "support",
+      "claim": "Reduced responsiveness to interleukin-2 in regulatory T cells is associated with greater resistance to autoimmune diseases such as Type 1 Diabetes.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "13923140",
+      "assessment": "disagree"
+    },
+    {
+      "id": 1029,
+      "error_type": "direction_reversed",
+      "reasoning": "The evidence says that IL2RA T1D susceptibility genotypes are associated with lower circulating soluble IL-2RA and explicitly suggests that inherited lower immune responsiveness predisposes to type 1 diabetes. That is the opposite of the claim, which says reduced responsiveness is associated with greater resistance to autoimmune disease. The paper supports increased susceptibility, not resistance. A domain expert would therefore judge the gold CONTRADICT label as incorrect for this claim as written.",
+      "correct_label": "support",
+      "claim": "Reduced responsiveness to interleukin-2 in regulatory T cells is associated with greater resistance to autoimmune diseases such as Type 1 Diabetes.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "13940200",
+      "assessment": "disagree"
+    },
+    {
+      "id": 1041,
+      "error_type": "other",
+      "reasoning": "The evidence is about nucleosome stability in vertebrate nucleosomes and specifically reports that H3.3/H2A.Z particles are less stable than H3.3/H2A particles, while H3/H2A.Z particles are at least as stable as H3/H2A. It does not address yeasts, gene activation kinetics, or stabilization of +1 nucleosomes, so the claim is not supported by the provided text. The gold label CONTRADICT is too strong because the evidence does not directly refute the claim; it is simply about a different system and a different mechanistic context. A domain expert would likely mark this as ambiguous rather than contradicted.",
+      "correct_label": "ambiguous",
+      "claim": "Replacement of histone H2A with H2A.Z slows gene activation in yeasts by stabilizing +1 nucleosomes.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "25254425",
+      "assessment": "disagree"
+    },
+    {
+      "id": 1049,
+      "error_type": "generalization_beyond_evidence",
+      "reasoning": "The evidence describes a specific ribosomal protein mutation causing pronounced tissue-specific patterning defects and selective translational effects, which points to substantial cell/tissue specificity rather than a low degree of it. The claim is also a broad generalization about all ribosomopathies, while the provided paper only supports that ribosomal protein defects can have highly specific developmental consequences. A domain expert would not infer 'low degree' of specificity from this evidence; if anything, it suggests the opposite. Therefore the gold CONTRADICT label is incorrect.",
+      "correct_label": "support",
+      "claim": "Ribosomopathies have a low degree of cell and tissue specific pathology.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "12486491",
+      "assessment": "disagree"
+    },
+    {
+      "id": 1062,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that S-nitrosylated GAPDH physiologically transnitrosylates nuclear proteins, explicitly including histone deacetylase-2 (HDAC2). This matches the claim that S-nitrosylated GAPDH physiologically transnitrosylates histone deacetylases. The wording is slightly general because the paper names HDAC2 specifically rather than all histone deacetylases, but the claim is supported by the cited evidence and is not an overreach in this context. A domain expert would likely accept the gold label SUPPORT.",
+      "correct_label": "support",
+      "claim": "S-nitrosylated GAPDH physiologically transnitrosylates histone deacetylases.",
+      "gold_label": "SUPPORT",
+      "doc_id": "20381484",
+      "assessment": "agree"
+    },
+    {
+      "id": 1086,
+      "error_type": "none",
+      "reasoning": "The evidence directly supports the claim. The randomized controlled trial studied men with sexual dysfunction associated with SRI antidepressant treatment and found that sildenafil significantly improved erectile function compared with placebo. The conclusion explicitly states that sildenafil effectively improved erectile function and other aspects of sexual function in this population. Although the claim says SSRI antidepressants, the paper includes selective serotonin reuptake inhibitors within the broader SRI category, so the label SUPPORT is appropriate.",
+      "correct_label": "support",
+      "claim": "Sildenafil improves erectile function in men who experience sexual dysfunction as a result of the use of SSRI antidepressants.",
+      "gold_label": "SUPPORT",
+      "doc_id": "39281140",
+      "assessment": "agree"
+    },
+    {
+      "id": 1088,
+      "error_type": "direction_reversed",
+      "reasoning": "The evidence says that eliminating BCL-2 caused rapid loss of leukemic cells and prolonged survival, which means BCL-2 is required for tumor maintenance in this model. The claim states that silencing Bcl2 is important for maintenance and progression of tumors, which is the opposite direction of the evidence. Rather than showing that Bcl2 silencing helps tumors, the paper shows that Bcl2 loss impairs tumor maintenance. This is a clear contradiction, not merely an imprecise wording issue.",
+      "correct_label": "support",
+      "claim": "Silencing of Bcl2 is important for the maintenance and progression of tumors.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "37549932",
+      "assessment": "disagree"
+    },
+    {
+      "id": 1089,
+      "error_type": "none",
+      "reasoning": "The evidence supports the core idea that Smc5/6 engagement is linked to activation of the Mms21 SUMO ligase through ATP-dependent remodeling. The abstract explicitly states that Mms21-dependent sumoylation requires ATP binding to Smc5 and that the ATP-binding activity of Smc5/6 is coordinated with its SUMO ligase via physical remodeling of the molecule. Although the claim uses the phrase \"drives the activation,\" which is slightly interpretive, it is consistent with the paper’s conclusion that ATP-dependent remodeling promotes sumoylation/ligase function. A domain expert would likely accept the gold SUPPORT label.",
+      "correct_label": "support",
+      "claim": "Smc5/6 engagment drives the activation of SUMO E3 ligase Mms21 by ATP-dependent remolding.",
+      "gold_label": "SUPPORT",
+      "doc_id": "17628888",
+      "assessment": "agree"
+    },
+    {
+      "id": 1104,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that, among patients with intracerebral hemorrhage, prior use of NOACs (direct oral anticoagulants) was associated with a lower risk of in-hospital mortality compared with prior use of warfarin (AOR 0.75; adjusted risk difference -5.7%). This matches the claim’s direction and outcome. Although the claim says 'stroke patients' broadly, the paper is specifically about ICH patients, which is a stroke subtype, so the wording is acceptable in this context. There is no numerical or causal overclaim beyond the observational association reported.",
+      "correct_label": "support",
+      "claim": "Stroke patients with prior use of direct oral anticoagulants have a lower risk of in-hospital mortality than stroke patients with prior use of warfarin.",
+      "gold_label": "SUPPORT",
+      "doc_id": "3898784",
+      "assessment": "agree"
+    },
+    {
+      "id": 1107,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that during cold-induced browning of subcutaneous fat, most beige adipocytes arise, which supports the claim that subcutaneous fat depots undergo browning processes after cold exposure. The wording 'extensive browning processes' is somewhat broad, but the abstract also emphasizes adipogenic plasticity and cold-induced browning in subcutaneous fat, making the SUPPORT label reasonable. There is no clear contradiction or numerical mismatch in the evidence provided.",
+      "correct_label": "support",
+      "claim": "Subcutaneous fat depots undergo extensive browning processes after cold exposure.",
+      "gold_label": "SUPPORT",
+      "doc_id": "20532591",
+      "assessment": "agree"
+    },
+    {
+      "id": 1110,
+      "error_type": "negation_missed",
+      "reasoning": "The claim says that suboptimal nutrition is not predictive of chronic disease, but the evidence shows that poor nutritional risk factors are major contributors to disease burden. In particular, childhood undernutrition and diets high in sodium are among the largest contributors to global DALYs, and the paper frames these as risk factors with attributable burden. While the paper does not use the exact phrase 'predictive of chronic disease,' it clearly supports an association between nutritional risks and disease burden rather than a lack of prediction. The gold label CONTRADICT is therefore not well aligned with the evidence as presented; the claim is too broad and somewhat imprecise, but the evidence still points against it. The correct label is support? No—because the claim is negated and the evidence indicates the opposite, the dataset should mark this as contradict, but the specific issue is that the claim wording is imprecise rather than a clean logical contradiction.",
+      "correct_label": "contradict",
+      "claim": "Suboptimal nutrition is not predictive of chronic disease",
+      "gold_label": "CONTRADICT",
+      "doc_id": "13770184",
+      "assessment": "disagree"
+    },
+    {
+      "id": 1121,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that synaptic stimulation (glutamate uncaging / sLTP induction) causes rapid BDNF release from stimulated dendritic spines and that this release is NMDAR- and CaMKII-dependent. This is a close match to the claim that synaptic activity enhances local release of BDNF from postsynaptic dendrites. Although the paper emphasizes dendritic spines rather than dendrites broadly, spines are postsynaptic dendritic compartments, so the wording is acceptable. A domain expert would likely consider the gold SUPPORT label correct.",
+      "correct_label": "support",
+      "claim": "Synaptic activity enhances local release of brain derived neurotrophic factor from postsynaptic dendrites.",
+      "gold_label": "SUPPORT",
+      "doc_id": "4456756",
+      "assessment": "agree"
+    },
+    {
+      "id": 1130,
+      "error_type": "direction_reversed",
+      "reasoning": "The claim says tTregs lacking αvβ8 are more adept at suppressing pathogenic T-cell responses during active inflammation. The cited evidence states the opposite: Treg cells lacking αvβ8 were unable to suppress pathogenic T-cell responses during active inflammation. This is a direct reversal of the experimental finding, so the gold CONTRADICT label is correct. The wording is not ambiguous enough to change the interpretation.",
+      "correct_label": "contradict",
+      "claim": "T regulatory cells (tTregs) lacking αvβ8 are more adept at suppressing pathogenic T-cell responses during active inflammation.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "17997584",
+      "assessment": "agree"
+    },
+    {
+      "id": 1132,
+      "error_type": "other",
+      "reasoning": "The evidence supports that TCR-CD3 conformational changes and clustering are required for T cell activation, but it does not specifically show that 'TCR/CD3 microdomains are required to induce the immunologic synapse.' The claim shifts from a molecular requirement for activation to a broader statement about immunologic synapse induction, which is not directly addressed in the abstract. Also, the wording is awkward ('are a required to'), making the intended meaning somewhat imprecise. A domain expert would likely accept the paper as supporting a requirement for TCR-CD3 clustering/conformational change in activation, but not this exact synapse claim.",
+      "correct_label": "ambiguous",
+      "claim": "TCR/CD3 microdomains are a required to induce the immunologic synapse to activate T cells.",
+      "gold_label": "SUPPORT",
+      "doc_id": "33499189",
+      "assessment": "disagree"
+    },
+    {
+      "id": 1137,
+      "error_type": "direction_reversed",
+      "reasoning": "The evidence directly states that A20/TNFAIP3 is overexpressed in glioblastoma stem cells and that inhibiting it decreases growth, survival, and tumorigenic potential. The authors explicitly conclude that A20 may function as a tumor enhancer in glioma through promotion of GSC survival, and they contrast this with tumor suppressor behavior in lymphoma. Thus the claim that TNFAIP3 is a tumor suppressor in glioblastoma is contradicted by the paper's findings. The gold label is correct.",
+      "correct_label": "contradict",
+      "claim": "TNFAIP3 is a tumor suppressor in glioblastoma.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "33370",
+      "assessment": "agree"
+    },
+    {
+      "id": 1140,
+      "error_type": "none",
+      "reasoning": "The evidence directly addresses vitamin E supplementation and reports no effect on prostate cancer incidence, with a hazard ratio near 1 and a non-significant p-value. The conclusion explicitly states that neither vitamin E nor C supplementation reduced the risk of prostate cancer. Although the claim specifies \"400 mg of α-tocopheryl acetate\" rather than the paper's \"400 IU of vitamin E every other day,\" the intended substance is vitamin E and the study does not support a preventive effect. Thus the CONTRADICT label is appropriate.",
+      "correct_label": "contradict",
+      "claim": "Taking 400mg of α-tocopheryl acetate helps to prevent prostate cancer.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "12009265",
+      "assessment": "agree"
+    },
+    {
+      "id": 1144,
+      "error_type": "direction_reversed",
+      "reasoning": "The claim says taxation of sugar-sweetened beverages had no effect on the incidence rate of type II diabetes in India, but the evidence explicitly reports a reduction in incident type 2 diabetes associated with a 20% SSB tax (1.6% reduction under one scenario, 2.5% under another). The conclusion also states that sustained SSB taxation could mitigate type 2 diabetes in India. This is a clear contradiction rather than a null effect. The claim is not merely imprecise; it is reversed relative to the study’s findings.",
+      "correct_label": "support",
+      "claim": "Taxation of sugar-sweetened beverages had no effect on the incidence rate of type II diabetes in India.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "10071552",
+      "assessment": "disagree"
+    },
+    {
+      "id": 1146,
+      "error_type": "none",
+      "reasoning": "The evidence supports the claim that teaching hospitals do not provide better care than non-teaching hospitals in the aggregate. The systematic review reports a mortality summary relative risk of 0.96 with a confidence interval reaching 1.00, indicating no clear advantage for teaching hospitals, and states that teaching healthcare structures typically did not do better than nonteaching ones. The conclusion also says teaching status on its own does not markedly improve patient outcomes. While some specific diagnoses favored teaching hospitals, the overall claim is about general care, so the gold label is appropriate.",
+      "correct_label": "support",
+      "claim": "Teaching hospitals do not provide better care than non-teaching hospitals.",
+      "gold_label": "SUPPORT",
+      "doc_id": "13906581",
+      "assessment": "agree"
+    },
+    {
+      "id": 1150,
+      "error_type": "causal_overclaim",
+      "reasoning": "The evidence supports that Tetraspanin 3 is required for AML development/propagation and plays an important role in oncogenesis, but the claim says it is a \"causative factor in the development\" of AML. That wording is stronger and more specific than the paper’s evidence, which shows loss of Tspan3 impairs leukemia stem cell self-renewal and disease propagation in mouse models and blocks growth of patient samples. This supports a functional contribution to AML biology, but not necessarily that Tetraspanin-3 alone causes AML development in the causal sense implied by the claim. A domain expert would likely view the gold SUPPORT label as somewhat overconfident; the safer label is ambiguous or, at minimum, debatable.",
+      "correct_label": "ambiguous",
+      "claim": "Tetraspanin-3 is a causative factor in the development of acute myelogenous leukemia",
+      "gold_label": "SUPPORT",
+      "doc_id": "11369420",
+      "assessment": "debatable"
+    },
+    {
+      "id": 1163,
+      "error_type": "none",
+      "reasoning": "The evidence supports the claim. The paper explicitly describes DdrB as a single-stranded DNA-binding protein and states that it has a novel fold distinct from all other SSB proteins characterized to date. Calling it an \"alternative SSB\" is consistent with the text’s framing that DdrB may fulfill standard SSB protein functions in ssDNA protection while being structurally distinct from canonical SSBs. The claim is slightly interpretive, but not beyond what the abstract supports.",
+      "correct_label": "support",
+      "claim": "The DdrB protein from Deinococcus radiodurans is an alternative SSB.",
+      "gold_label": "SUPPORT",
+      "doc_id": "15305881",
+      "assessment": "agree"
+    },
+    {
+      "id": 1180,
+      "error_type": "none",
+      "reasoning": "The evidence explicitly states that MDA5 is one of the RIG-I-like receptors that play a major role in pathogen sensing of RNA virus infection. This directly supports the claim that MDA5 is a sensor of RNA virus infection. The wording is broad but not overstated relative to the abstract, and there is no contradiction or numerical issue. A domain expert would likely accept the gold SUPPORT label.",
+      "correct_label": "support",
+      "claim": "The PRR MDA5 is a sensor of RNA virus infection.",
+      "gold_label": "SUPPORT",
+      "doc_id": "31272411",
+      "assessment": "agree"
+    },
+    {
+      "id": 1185,
+      "error_type": "none",
+      "reasoning": "The claim closely matches the paper’s stated result: \"Even if only 7% of patients awaiting kidney transplantation participated in an optimized national KPD program, the health care system could save as much as $750 million.\" The wording \"can save up to\" aligns with the paper’s \"could save as much as,\" which is an upper-bound estimate rather than a precise point estimate. There is no numerical mismatch or reversal in direction. A domain expert would likely accept the gold SUPPORT label.",
+      "correct_label": "support",
+      "claim": "The US health care system can save up to $750 million if 7% of patients waiting for kidney transplants participate in the optimized national kidney paired donation program.",
+      "gold_label": "SUPPORT",
+      "doc_id": "16737210",
+      "assessment": "agree"
+    },
+    {
+      "id": 1187,
+      "error_type": "none",
+      "reasoning": "The evidence supports the core idea that YAP/TAZ (including YAP1) function as transcription co-activators and regulate gene expression primarily through interaction with TEAD, a DNA-binding transcription factor family. The claim’s statement that the YAP1 and TEAD complex translocates into the nucleus is also consistent with the abstract’s description of nuclear translocation of YAP/TAZ as the active state. Although the paper focuses more on TEAD shuttling and does not explicitly say the exact phrase \"YAP1 and TEAD complex,\" the overall claim is aligned with the described mechanism. I do not see a substantive contradiction or numerical/causal mismatch.",
+      "correct_label": "support",
+      "claim": "The YAP1 and TEAD complex tanslocates into the nucleus where it interacts with transcription factors and DNA-binding proteins that modulate target gene transcription.",
+      "gold_label": "SUPPORT",
+      "doc_id": "52873726",
+      "assessment": "agree"
+    },
+    {
+      "id": 1202,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that the centers of granulomas have a pro-inflammatory environment, characterized by antimicrobial peptides, reactive oxygen species, and pro-inflammatory eicosanoids. This supports the claim that the center of the granuloma induces a pro-inflammatory immune response, although the wording is slightly imprecise because the paper describes a pro-inflammatory environment rather than explicitly saying the center 'induces' it. Still, the intended meaning is clearly supported by the abstract. A domain expert would likely accept the SUPPORT label.",
+      "correct_label": "support",
+      "claim": "The center of the granuloma in an immune cell induces a pro-inflammatory immune response.",
+      "gold_label": "SUPPORT",
+      "doc_id": "3475317",
+      "assessment": "agree"
+    },
+    {
+      "id": 1216,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that Tmem27’s extracellular domain is glycosylated, cleaved, and shed from the plasma membrane of beta cells. Since TMEM27 is the human ortholog/name used in the claim, this supports the statement that the extracellular domain of TMEM27 is cleaved in human beta cells. The wording is slightly generalized from the paper’s beta-cell context, but not enough to make the label debatable. A domain expert would likely accept SUPPORT.",
+      "correct_label": "support",
+      "claim": "The extracellular domain of TMEM27 is cleaved in human beta cells.",
+      "gold_label": "SUPPORT",
+      "doc_id": "24142891",
+      "assessment": "agree"
+    },
+    {
+      "id": 1221,
+      "error_type": "none",
+      "reasoning": "The evidence supports the claim that metastases and primary tumors are genomically similar in the sense that they share many mutations. The abstract explicitly states that shared mutations between primary carcinomas and matched metastases have the same initiating carcinogen signature, indicating substantial overlap in genomic aberrations. Although it also notes that non-shared mutations exist and have different signatures, that does not contradict the overall similarity claim. The gold label CONTRADICT is therefore not correct.",
+      "correct_label": "support",
+      "claim": "The genomic aberrations found in matasteses are very similar to those found in the primary tumor.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "19736671",
+      "assessment": "agree"
+    },
+    {
+      "id": 1225,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that rs647161 had a highly significant association in the combined analysis and was one of the replicated susceptibility loci for colorectal cancer. The claim says the locus rs647161 is associated with colorectal carcinoma, which is consistent with the paper’s finding for colorectal cancer/CRC. There is no meaningful mismatch between colorectal carcinoma and colorectal cancer in this context, and the label SUPPORT is appropriate.",
+      "correct_label": "support",
+      "claim": "The locus rs647161 is associated with colorectal carcinoma.",
+      "gold_label": "SUPPORT",
+      "doc_id": "9650982",
+      "assessment": "agree"
+    },
+    {
+      "id": 1232,
+      "error_type": "direction_reversed",
+      "reasoning": "The evidence explicitly states that the minor G allele of FOXO3 is associated with a milder course of Crohn's disease, not more severe symptoms. The claim reverses the direction of the association. Because the paper directly contrasts the G allele with milder disease severity, the gold label CONTRADICT is correct. A domain expert would agree that the evidence contradicts the claim as written.",
+      "correct_label": "contradict",
+      "claim": "The minor G allele of FOXO3 is related to more severe symptoms of Crohn's Disease.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "13905670",
+      "assessment": "agree"
+    },
+    {
+      "id": 1241,
+      "error_type": "none",
+      "reasoning": "The evidence states that the functional heart is comprised of mesoderm-derived lineages, including cardiomyocytes, and that a human cardiovascular progenitor gives rise to contracting cardiomyocytes. This supports the claim that the myocardial lineage develops from cardiac progenitors of mesodermal origin. The wording is broad but consistent with the paper’s description of mesoderm-derived cardiovascular progenitors giving rise to cardiac lineages. There is no clear contradiction or numerical mismatch.",
+      "correct_label": "support",
+      "claim": "The myocardial lineage develops from cardiac progenitors of mesodermal origin.",
+      "gold_label": "SUPPORT",
+      "doc_id": "4427392",
+      "assessment": "agree"
+    },
+    {
+      "id": 1259,
+      "error_type": "none",
+      "reasoning": "The evidence directly supports the claim that tamoxifen metabolism capacity and treatment outcome are related to the patient's genetic make-up, specifically CYP2D6 variation. The paper reports worse recurrence and survival-related outcomes in patients with reduced or poor CYP2D6 metabolism compared with extensive metabolizers, and concludes that two functional alleles are associated with better outcomes. Although the claim is phrased broadly as 'dependent on genetic make-up,' the evidence clearly shows a genotype-outcome association in the context of tamoxifen metabolism. This is a reasonable SUPPORT label.",
+      "correct_label": "support",
+      "claim": "The relationship between a breast cancer patient's capacity to metabolize tamoxifen and treatment outcome is dependent on the patient's genetic make-up.",
+      "gold_label": "SUPPORT",
+      "doc_id": "24341590",
+      "assessment": "agree"
+    },
+    {
+      "id": 1262,
+      "error_type": "none",
+      "reasoning": "The claim matches the paper’s explicit conclusion that repair of Cas9-induced double-strand breaks “tends to be error prone.” The evidence is directly about human cells and Cas9-induced DSB repair fidelity, so there is no species mismatch or overgeneralization beyond the abstract. The wording is appropriately cautious (“is error-prone”), which aligns with the paper’s qualitative finding. A domain expert would likely agree with the SUPPORT label.",
+      "correct_label": "support",
+      "claim": "The repair of Cas9-induced double strand breaks in human DNA is error-prone.",
+      "gold_label": "SUPPORT",
+      "doc_id": "44172171",
+      "assessment": "agree"
+    },
+    {
+      "id": 1266,
+      "error_type": "none",
+      "reasoning": "The evidence directly supports the first part of the claim: higher placental weight in pregnancies is associated with increased maternal breast cancer risk, with a dose-like pattern across placental-weight categories. The abstract also states that 95% of breast cancers occurred before age 50, and the paper’s focus is on maternal risk after pregnancy, which is consistent with a stronger association for premenopausal breast cancer. Although the abstract does not explicitly quantify the premenopausal subgroup effect in the excerpt provided, the claim is aligned with the study’s reported findings and overall conclusion. A domain expert would likely accept the gold SUPPORT label.",
+      "correct_label": "support",
+      "claim": "The risk of breast cancer among parous women increases with placental weight of pregnancies, and this association is strongest for premenopausal breast cancer.",
+      "gold_label": "SUPPORT",
+      "doc_id": "37480103",
+      "assessment": "agree"
+    },
+    {
+      "id": 1270,
+      "error_type": "direction_reversed",
+      "reasoning": "The evidence states that self-harm rates were more than ten times higher in female prisoners than in male prisoners. The claim reverses this direction by saying male prisoners have ten times the risk of female prisoners. Since the numerical factor is similar but the sex comparison is inverted, the gold CONTRADICT label is correct. A domain expert would not interpret the evidence as supporting the claim as written.",
+      "correct_label": "contradict",
+      "claim": "The risk of male prisoners harming themselves is ten times that of female prisoners.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "13900610",
+      "assessment": "agree"
+    },
+    {
+      "id": 1271,
+      "error_type": "none",
+      "reasoning": "The evidence directly supports the claim. The paper states that LGE patterns progress from none to subendocardial to transmural with increasing amyloid burden, and explicitly concludes that transmural LGE represents advanced cardiac amyloidosis. Describing the severity of cardiac involvement by the degree of transmurality is therefore consistent with the reported continuum of disease involvement. The wording is slightly general, but not enough to make the gold label debatable.",
+      "correct_label": "support",
+      "claim": "The severity of cardiac involvement in amyloidosis can be described by the degree of transmurality of late gadolinium enhancement in MRI.",
+      "gold_label": "SUPPORT",
+      "doc_id": "13768432",
+      "assessment": "agree"
+    },
+    {
+      "id": 1273,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that the sliding activity of the budding yeast kinesin-8 Kip3 promotes bipolar spindle assembly. The claim is a close paraphrase of the abstract and key evidence, with no apparent numerical, causal, or directional mismatch. The wording is sufficiently precise and matches the paper’s conclusion.",
+      "correct_label": "support",
+      "claim": "The sliding activity of kinesin-8 protein Kip3 promotes bipolar spindle assembly.",
+      "gold_label": "SUPPORT",
+      "doc_id": "11041152",
+      "assessment": "agree"
+    },
+    {
+      "id": 1274,
+      "error_type": "other",
+      "reasoning": "The evidence supports that PAAR-repeat proteins form a sharp conical extension at the tip of the T6SS VgrG spike and can be involved in attaching effector domains, with multiple effectors delivered with the spike. However, the claim is more specific and somewhat imprecise: it refers to the 'inner tube' and to the 'toxic type VI secretion system (T6SS) antibacterial effector in Escherichia coli,' whereas the provided paper discusses the T6SS spike complex in general and does not specifically establish this in E. coli. The evidence therefore supports the general idea that tip-associated components can carry effectors, but not the exact wording as stated. A domain expert might accept the intended meaning, but the annotation is somewhat debatable because of the organism and structural terminology mismatch.",
+      "correct_label": "ambiguous",
+      "claim": "The tip of the inner tube of the toxic type VI secretion system (T6SS) antibacterial effector in Escherichia coli (E. coli) carries toxic effector proteins.",
+      "gold_label": "SUPPORT",
+      "doc_id": "4406819",
+      "assessment": "debatable"
+    },
+    {
+      "id": 1290,
+      "error_type": "none",
+      "reasoning": "The evidence clearly indicates that statin use is associated with lower hip fracture risk, with adjusted odds ratios below 1.0 for both recent and longer-term use. That is consistent with an inverse relationship between hip fractures and statin use. The claim is phrased as a relationship rather than a causal statement, so the observational nature of the study does not create a mismatch. The gold label SUPPORT is therefore appropriate.",
+      "correct_label": "support",
+      "claim": "There is an inverse relationship between hip fractures and statin use.",
+      "gold_label": "SUPPORT",
+      "doc_id": "4687948",
+      "assessment": "agree"
+    },
+    {
+      "id": 1298,
+      "error_type": "none",
+      "reasoning": "The claim matches the study population and outcome closely: hospitalized, immobile patients with acute stroke, and thigh-length graduated compression stockings. The trial found no significant reduction in DVT (10.0% vs 10.5%, absolute risk reduction 0.5% with CI crossing zero), and the authors explicitly state the data do not support use of thigh-length GCS in this setting. The wording \"did not reduce\" is appropriately supported by the non-significant result and interpretation. There is no numerical or causal overreach beyond the evidence provided.",
+      "correct_label": "support",
+      "claim": "Thigh-length graduated compression stockings (GCS) did not reduce deep vein thrombosis in patients admitted to hospital who are immobile because of acute stroke.",
+      "gold_label": "SUPPORT",
+      "doc_id": "11718220",
+      "assessment": "agree"
+    },
+    {
+      "id": 1303,
+      "error_type": "negation_missed",
+      "reasoning": "The evidence says CK-2017357/Tirasemtiv is a fast-skeletal-troponin activator that binds selectively to the fast-skeletal-troponin complex and sensitizes muscle to calcium. That indicates it does have an effect on fast-twitch (fast skeletal) muscle, rather than no effect. The claim is a direct negation of the paper’s stated mechanism and is therefore contradicted by the evidence. A domain expert would not interpret this abstract as supporting 'no effect on fast-twitch muscle.'",
+      "correct_label": "support",
+      "claim": "Tirasemtiv has no effect on fast-twitch muscle.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "12631697",
+      "assessment": "disagree"
+    },
+    {
+      "id": 1319,
+      "error_type": "none",
+      "reasoning": "The evidence states that human glial progenitor cells were engrafted into mice and, upon maturation, the recipient brains contained both human glial progenitors and astrocytes. This directly supports the claim that transplanted human glial cells can differentiate within the host animal. The wording is broad, but the paper clearly shows differentiation of transplanted human glial progenitors into astrocytes in vivo. There is no numerical or directional mismatch here.",
+      "correct_label": "support",
+      "claim": "Transplanted human glial cells can differentiate within the host animal.",
+      "gold_label": "SUPPORT",
+      "doc_id": "16284655",
+      "assessment": "agree"
+    },
+    {
+      "id": 1320,
+      "error_type": "other",
+      "reasoning": "The claim says transplanted human glial progenitor cells are incapable of forming a neural network with host neurons. The evidence does not support that incapacity; instead, it shows the engrafted human glia were integrated into the host brain and enhanced synaptic plasticity and learning, which is consistent with functional interaction with host neural circuits. While the abstract specifically mentions gap-junction coupling to host astroglia rather than direct neuron-to-glia network formation, the claim is a strong negative statement that is contradicted by the demonstrated functional integration. A domain expert would therefore accept the CONTRADICT label.",
+      "correct_label": "contradict",
+      "claim": "Transplanted human glial progenitor cells are incapable of forming a neural network with host animals' neurons.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "16284655",
+      "assessment": "agree"
+    },
+    {
+      "id": 1335,
+      "error_type": "none",
+      "reasoning": "The evidence directly supports the claim that UCB (umbilical cord blood) T cells maintain high TCR diversity after transplantation. The abstract states that after 6 months, cord blood-graft recipients approximated the TCR diversity of healthy individuals, which is consistent with preserved/high diversity post-transplant. The claim is slightly simplified because it says 'maintain' rather than 'recover to approximate healthy diversity,' but this does not change the substantive meaning. There is no numerical or directional mismatch in the evidence provided.",
+      "correct_label": "support",
+      "claim": "UCB T cells maintain high TCR diversity after transplantation.",
+      "gold_label": "SUPPORT",
+      "doc_id": "27910499",
+      "assessment": "agree"
+    },
+    {
+      "id": 1336,
+      "error_type": "other",
+      "reasoning": "The evidence does not support the claim that UCB T cells reduce TCR diversity after transplantation. In the abstract, cord blood-graft recipients (i.e., UCB/umbilical cord blood) are described as approximating the TCR diversity of healthy individuals after 6 months, which suggests no reduction relative to healthy controls rather than a decrease caused by UCB T cells. The reduced TCR diversity is reported for recipients of T cell-depleted peripheral-blood stem cell grafts, not for cord blood-graft recipients. Thus the gold label CONTRADICT is not correct for the claim as stated; the evidence is more consistent with support for preserved/near-normal diversity in UCB recipients.",
+      "correct_label": "support",
+      "claim": "UCB T cells reduce TCR diversity after transplantation.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "27910499",
+      "assessment": "disagree"
+    },
+    {
+      "id": 1337,
+      "error_type": "other",
+      "reasoning": "The evidence supports that UBC13 is required for PCNA polyubiquitination and that the relevant chains are K63-linked, but it does not explicitly state that UBC13 itself 'generates a K63-linked polyubiquitin moiety at PCNA K164.' That wording is a mechanistic synthesis: UBC13 is an E2 enzyme, not a ubiquitin ligase in the strict sense, and the abstract does not directly specify the exact lysine residue K164 for the polyubiquitin moiety. A domain expert would likely infer the intended meaning from the broader literature, but as written the claim is more specific than the quoted evidence. Thus the gold SUPPORT label is plausible but somewhat debatable on precision grounds.",
+      "correct_label": "support",
+      "claim": "Ubiquitin ligase UBC13 generates a K63-linked polyubiquitin moiety at PCNA K164.",
+      "gold_label": "SUPPORT",
+      "doc_id": "20231138",
+      "assessment": "debatable"
+    },
+    {
+      "id": 1339,
+      "error_type": "direction_reversed",
+      "reasoning": "The evidence directly states that ultrasound imaging significantly reduced the risk of traumatic procedures and reduced the number of insertion attempts and needle redirections. The claim says ultrasound guidance raises the number of traumatic procedures, which is the opposite direction of the reported effect. There is no ambiguity here: the paper supports a decrease, not an increase. Therefore the gold label CONTRADICT is correct.",
+      "correct_label": "contradict",
+      "claim": "Ultrasound guidance significantly raises the number of traumatic procedures when attempting needle insertion.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "15482274",
+      "assessment": "agree"
+    },
+    {
+      "id": 1352,
+      "error_type": "none",
+      "reasoning": "The abstract explicitly states that mosGCTL-1 is \"induced by WNV,\" which directly supports the claim that its upregulation is induced upon infection with West Nile virus. Although the claim uses the broader term \"upregulation,\" induction in this context is consistent with increased expression. There is no numerical or directional mismatch, and the evidence is specific to WNV infection in mosquitoes, matching the claim well. A domain expert would likely accept the gold SUPPORT label.",
+      "correct_label": "support",
+      "claim": "Upregulation of mosGCTL-1 is induced upon infection with West Nile virus.",
+      "gold_label": "SUPPORT",
+      "doc_id": "12885341",
+      "assessment": "agree"
+    },
+    {
+      "id": 1359,
+      "error_type": "direction_reversed",
+      "reasoning": "The evidence shows the opposite of the claim: at 12 weeks, combination therapy with varenicline plus bupropion had higher abstinence rates than varenicline monotherapy. The claim says varenicline monotherapy is more effective after 12 weeks compared to combination therapies with varenicline or bupropion, but the cited trial directly compares combination varenicline+bupropion against varenicline alone and finds combination superior for prolonged abstinence. The wording is also somewhat imprecise because it mentions 'combination nicotine replacement therapies with varenicline or bupropion,' which does not match the study design, but the main issue is that the direction of effect is reversed. Therefore the gold label CONTRADICT is correct only if interpreted against varenicline monotherapy being more effective; however the claim itself is contradicted by the evidence, so the label should be CONTRADICT/contradict? Wait: since the task is to judge the gold label, the gold label matches the evidence.",
+      "correct_label": "contradict",
+      "claim": "Varenicline monotherapy is more effective after 12 weeks of treatment compared to combination nicotine replacement therapies with varenicline or bupropion.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "11614737",
+      "assessment": "disagree"
+    },
+    {
+      "id": 1368,
+      "error_type": "other",
+      "reasoning": "The evidence does not support the claim that vitamin D deficiency affects the term of delivery. The abstract reports associations with gestational diabetes, pre-eclampsia, small for gestational age infants, bacterial vaginosis, birth weight, and caesarean section, but it does not mention term of delivery or gestational age at delivery. In fact, the only delivery-related outcome explicitly discussed is caesarean section, which was not associated with low vitamin D. The gold label therefore appears incorrect because the specific outcome in the claim is unsupported by the provided evidence.",
+      "correct_label": "ambiguous",
+      "claim": "Vitamin D deficiency effects the term of delivery.",
+      "gold_label": "SUPPORT",
+      "doc_id": "2425364",
+      "assessment": "disagree"
+    },
+    {
+      "id": 1370,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that pregnant women with low serum 25-OHD levels had an increased risk of low birthweight infants and lower birth weight infants. This is the opposite of saying vitamin D deficiency is unrelated to birth weight. Although the paper is about maternal 25-OHD levels during pregnancy rather than vitamin D deficiency in general, the claim’s core assertion of no relationship is contradicted by the reported association. A domain expert would therefore agree with the CONTRADICT label.",
+      "correct_label": "contradict",
+      "claim": "Vitamin D deficiency is unrelated to birth weight.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "2425364",
+      "assessment": "agree"
+    },
+    {
+      "id": 1379,
+      "error_type": "none",
+      "reasoning": "The evidence directly supports the claim: in birth-record-based analyses, higher birth weight was associated with higher breast cancer risk, with a positive relative risk per 0.5 kg increment and a significant linear trend. The claim says women with a higher birth weight are more likely to develop breast cancer later in life, which matches the direction of association reported. Although the effect is modest and not consistent across all data sources, the cited evidence overall supports a positive association. The wording is general but not inaccurate enough to overturn the SUPPORT label.",
+      "correct_label": "support",
+      "claim": "Women with a higher birth weight are more likely to develop breast cancer later in life.",
+      "gold_label": "SUPPORT",
+      "doc_id": "16322674",
+      "assessment": "agree"
+    },
+    {
+      "id": 1379,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that heavier birth weights were associated with increased breast cancer risk, with odds ratios above 1 for higher birth-weight categories. The claim that women with a higher birth weight are more likely to develop breast cancer later in life is a faithful paraphrase of this association. Although the study is a meta-analysis and speaks in terms of risk rather than certainty, the direction of effect matches the claim clearly. There is no numerical mismatch or reversal of direction.",
+      "correct_label": "support",
+      "claim": "Women with a higher birth weight are more likely to develop breast cancer later in life.",
+      "gold_label": "SUPPORT",
+      "doc_id": "17450673",
+      "assessment": "agree"
+    },
+    {
+      "id": 1379,
+      "error_type": "none",
+      "reasoning": "The evidence directly supports the claim: the meta-analysis reports an increased risk of breast cancer with increased birthweight, with RR 1.15 (95% CI 1.09-1.21). The claim’s wording, “more likely to develop breast cancer later in life,” is a fair paraphrase of increased adult breast cancer risk associated with higher birth weight. There is no numerical mismatch or causal overstatement beyond the observational association reported in the paper.",
+      "correct_label": "support",
+      "claim": "Women with a higher birth weight are more likely to develop breast cancer later in life.",
+      "gold_label": "SUPPORT",
+      "doc_id": "23557241",
+      "assessment": "agree"
+    },
+    {
+      "id": 1379,
+      "error_type": "none",
+      "reasoning": "The evidence supports a positive association between higher birthweight and later breast cancer risk in women. The abstract reports that the majority of studies found a positive link, and the pooled relative risk for high versus low birthweight is 1.23 with a confidence interval above 1.0. The claim is phrased as 'more likely to develop breast cancer later in life,' which is consistent with an increased risk association, though the evidence is strongest for premenopausal breast cancer and not uniformly for postmenopausal disease. This does not undermine the overall SUPPORT label given the broad wording of the claim.",
+      "correct_label": "support",
+      "claim": "Women with a higher birth weight are more likely to develop breast cancer later in life.",
+      "gold_label": "SUPPORT",
+      "doc_id": "27123743",
+      "assessment": "agree"
+    },
+    {
+      "id": 1382,
+      "error_type": "direction_reversed",
+      "reasoning": "The evidence says that loss of PKCζ enhances intestinal tumorigenesis and that PKCζ acts as a metabolic tumor suppressor. This is the opposite direction of the claim, which says aPKCz causes tumour enhancement by affecting glutamine metabolism. The paper does discuss glutamine utilization through the serine biosynthetic pathway, but specifically in the context of PKCζ deficiency promoting this reprogramming, not PKCζ causing tumor enhancement. Thus the gold CONTRADICT label is not correct for the claim as written; the evidence supports the reverse relationship.",
+      "correct_label": "support",
+      "claim": "aPKCz causes tumour enhancement by affecting glutamine metabolism.",
+      "gold_label": "CONTRADICT",
+      "doc_id": "17755060",
+      "assessment": "disagree"
+    },
+    {
+      "id": 1385,
+      "error_type": "none",
+      "reasoning": "The evidence directly states that enhancing cSMAC formation reduced the stimulatory capacity of the weak peptide, which is the inverse of the claim that cSMAC formation enhances weak ligand signalling. In context, the paper argues that inability to form cSMAC underlies increased proliferation, so promoting cSMAC formation diminishes signaling from the weak ligand. The gold label SUPPORT is therefore consistent with the evidence as presented. There is no numerical or directional mismatch here.",
+      "correct_label": "support",
+      "claim": "cSMAC formation enhances weak ligand signalling.",
+      "gold_label": "SUPPORT",
+      "doc_id": "306006",
+      "assessment": "agree"
+    },
+    {
+      "id": 1389,
+      "error_type": "none",
+      "reasoning": "The evidence directly supports the claim that mTORC2 regulates intracellular cysteine-related metabolism through inhibition of xCT. The paper states that mTORC2 phosphorylates xCT and inhibits its activity, and that inhibiting mTORC2 increases cystine uptake and glutathione incorporation, which is consistent with altered intracellular cysteine availability. Although the claim says \"intracellular cysteine levels\" rather than cystine uptake/glutathione metabolism, this is a reasonable paraphrase of the mechanism described. A domain expert would likely accept the gold label as SUPPORT.",
+      "correct_label": "support",
+      "claim": "mTORC2 regulates intracellular cysteine levels through xCT inhibition.",
+      "gold_label": "SUPPORT",
+      "doc_id": "23895668",
+      "assessment": "agree"
+    }
+  ],
+  "summary": {
+    "total": 209,
+    "by_assessment": {
+      "agree": 152,
+      "debatable": 14,
+      "disagree": 43
+    },
+    "by_error_type": {
+      "causal_overclaim": 4,
+      "direction_reversed": 22,
+      "generalization_beyond_evidence": 9,
+      "negation_missed": 4,
+      "numerical_mismatch": 2,
+      "other": 16
+    }
+  },
+  "dataset": "scifact"
+}
