@@ -56,6 +56,14 @@ for claim in dev_claims:
 
 ## Important caveats
 
+### Additional cases proposed for review
+
+[Training pairs 417/6309659 and 378/11886686](proposed_train_reviews.md)
+have been submitted for adjudication. They are **not confirmed corrections**
+and are not included in the correction JSON files or published error counts.
+
+### Release limitations
+
 1. **Single-annotator caveat.** These corrections were made by one human annotator (the paper's first author), assisted on the 57 LLM-flagged disagreements by a frontier-LLM second opinion in chat mode. They have not yet been ratified by an independent second human rater. The blind annotator packet in [`../annotator_packets/`](../annotator_packets/) is provided for that purpose.
 
 2. **Defensible-but-borderline cases.** 8 cases were identified as "debatable but defensible" and intentionally left at their original gold labels. See `revision/outputs/debatable_cases_appendix.md` for the case-by-case justifications and the sensitivity analysis showing the headline error rate stays under 10% even if all 8 were reclassified.
